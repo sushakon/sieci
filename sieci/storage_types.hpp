@@ -22,10 +22,9 @@ public:
 
     std::list<Package>::const_iterator const_iterator;
     
-    void push(Package&&);
+    virtual void push(Package&&);
 
-    virtual ~IPackageStockpile() {}
-
+    virtual ~IPackageStockpile() = default;
 }
 
 class IPackageQueue(IPackageStockpile)
@@ -41,9 +40,6 @@ class PackageQueue(IPackageQueue)
 
 enum class PackageQueueType()
 {
-    FIFO;
-    LIFO;
+    FIFO, LIFO
 }
-
-
 #endif //UNTITLED_STORAGE_TYPES_HPP
