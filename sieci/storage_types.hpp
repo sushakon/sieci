@@ -5,22 +5,33 @@
 #ifndef UNTITLED_STORAGE_TYPES_HPP
 #define UNTITLED_STORAGE_TYPES_HPP
 
-#endif //UNTITLED_STORAGE_TYPES_HPP
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <stack>
+#include <optional>
+#include <list>
 
-class IPackageStockpile()
+#include "types.hpp"
+#include "package.hpp"
+
+class IPackageStockpile
 {
-    push(Package&&) : void
-    empty() : bool {query}
-    size() : size_type {query}
-    /iteratory/
-    ~IPackageStockpile()
+public:
+    IPackageStockpile() {}
+
+    std::list<Package>::const_iterator const_iterator;
+    
+    void push(Package&&);
+
+    virtual ~IPackageStockpile() {}
 
 }
 
 class IPackageQueue(IPackageStockpile)
 {
-    pop() : Package
-    get_queue_type() : PackageQueueType {query}
+    Package pop();
+    get_queue_type(); //PackageQueueType {query}
 }
 
 class PackageQueue(IPackageQueue)
@@ -30,6 +41,9 @@ class PackageQueue(IPackageQueue)
 
 enum class PackageQueueType()
 {
-    FIFO
-    LIFO
+    FIFO;
+    LIFO;
 }
+
+
+#endif //UNTITLED_STORAGE_TYPES_HPP
