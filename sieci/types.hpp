@@ -9,7 +9,6 @@
 #include <numeric>
 #include <ostream>
 
-
 using ElementID = int;
 
 #endif //UNTITLED_TYPES_HPP
