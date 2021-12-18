@@ -27,16 +27,19 @@ public:
     virtual ~IPackageStockpile() = default;
 }
 
+
 class IPackageQueue(IPackageStockpile)
 {
     Package pop();
     get_queue_type(); //PackageQueueType {query}
 }
 
+
 class PackageQueue(IPackageQueue)
 {
     PackageQueue(PackageQueueType)
 }
+
 
 enum class PackageQueueType()
 {

@@ -6,6 +6,7 @@
 #define UNTITLED_PACKAGE_HPP
  
 class Package {
+
 public:
     Package() {};
 
