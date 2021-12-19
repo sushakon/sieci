@@ -9,6 +9,6 @@
 #include <numeric>
 #include <ostream>
 
-using ElementID = int;
+using ElementID = std::size_t;
 
 #endif //UNTITLED_TYPES_HPP

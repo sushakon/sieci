@@ -9,40 +9,56 @@
 #include <vector>
 #include <algorithm>
 #include <stack>
-#include <optional>
 #include <list>
+#include <queue>
 
 #include "types.hpp"
 #include "package.hpp"
 
+
+enum class PackageQueueType {
+    FIFO,
+    LIFO
+};
+
+
 class IPackageStockpile
 {
 public:
-    IPackageStockpile() {}
+    using const_iterator = std::list<Package>::const_iterator;
 
-    std::list<Package>::const_iterator const_iterator;
-    
-    virtual void push(Package&&);
+    const_iterator cbegin() const { return Stockpile_.cbegin(); }
+    const_iterator cend() const { return Stockpile_.cend(); }
+    const_iterator begin() const { return Stockpile_.begin(); }
+    const_iterator end() const { return Stockpile_.end(); }
+
+
+    virtual void push(Package&& Pac) { Stockpile_.push_back(Pac); };
+    virtual bool empty() const { return Stockpile_.empty(); };
+    virtual size_t size() const { return Stockpile_.size(); };
 
     virtual ~IPackageStockpile() = default;
-}
 
+private:
+    std::list<Package> Stockpile_;
+};
 
-class IPackageQueue(IPackageStockpile)
+class IPackageQueue : IPackageStockpile {
+
+public:
+
+    virtual Package pop();
+
+    virtual PackageQueueType get_queue_type() const { };
+
+};
+
+class PackageQueue : IPackageQueue
 {
-    Package pop();
-    get_queue_type(); //PackageQueueType {query}
-}
+public:
+    PackageQueue(PackageQueueType) {}
+};
 
 
-class PackageQueue(IPackageQueue)
-{
-    PackageQueue(PackageQueueType)
-}
 
-
-enum class PackageQueueType()
-{
-    FIFO, LIFO
-}
 #endif //UNTITLED_STORAGE_TYPES_HPP
