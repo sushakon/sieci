@@ -11,3 +11,21 @@
 #include <stack>
 #include <optional>
 #include <string>
+
+Package IPackageQueue::pop()
+{
+	if (get_queue_type() == FIFO)
+	{
+
+	}
+	else if(get_queue_type() == LIFO)
+	{
+
+	}
+
+}
+
+PackageQueueType IPackageQueue::get_queue_type() const
+{
+	return PackageQueueType();
+}

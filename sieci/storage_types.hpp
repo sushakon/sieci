@@ -43,13 +43,13 @@ private:
     std::list<Package> Stockpile_;
 };
 
-class IPackageQueue : IPackageStockpile {
-
+class IPackageQueue : IPackageStockpile
+{
 public:
 
     virtual Package pop();
 
-    virtual PackageQueueType get_queue_type() const { };
+    virtual PackageQueueType get_queue_type() const;
 
 };
 
