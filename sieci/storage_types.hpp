@@ -59,12 +59,11 @@ private:
 class PackageQueue : IPackageQueue
 {
 public:
-    PackageQueue(PackageQueueType type, std::list<Package> list = {}) : type_(type), Stockpile_(list) {}
+    PackageQueue(PackageQueueType type, std::list<Package> list = {}) : type_(type), Stockpile_(list) {};
 
     PackageQueueType type_;
     std::list<Package> Stockpile_;
 };
-
 
 
 #endif //UNTITLED_STORAGE_TYPES_HPP
