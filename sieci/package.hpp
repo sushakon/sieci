@@ -6,12 +6,16 @@
 #define UNTITLED_PACKAGE_HPP
 
 #include <set>
+#include<iostream>
+
+std::set<ElementID> Package::assigned_IDs = {};
+std::set<ElementID> Package::freed_IDs_ = {};
 
 class Package {
 public:
     Package() {
 
-        if (not freed_IDs_.empty()) {
+        if (!freed_IDs_.empty()) {
             id_ = *freed_IDs_.cbegin();
             freed_IDs_.erase(0);
         }
@@ -25,17 +29,17 @@ public:
     Package(ElementID id) { id_ = id; };
     Package(Package&& Pac) = default;
 
-    Package& operator = (Package&& Pac);
+    Package& operator = (Package&& Pac) = default;
 
     ElementID get_id() const { return id_; };
 
     ~Package() = default;
 
+    static std::set<ElementID> assigned_IDs;
+    static std::set<ElementID> freed_IDs_;
+
 private:
     std::size_t id_ = 0;
-    inline static std::set<ElementID> assigned_IDs = {};
-    inline static std::set<ElementID> freed_IDs_ = {};
-
 };
 
 #endif //UNTITLED_PACKAGE_HPP

@@ -14,14 +14,19 @@
 
 Package IPackageQueue::pop()
 {
-	switch (type_)
+	const_iterator iterator;
+
+	switch (Package_.type_)
 	{
 	case PackageQueueType::FIFO:
+		iterator = Package_.Stockpile_.cbegin();
+		Package_.Stockpile_.pop_front();
 
+	case PackageQueueType::LIFO:
+		iterator = Package_.Stockpile_.cend();
+		Package_.Stockpile_.pop_back();
 	}
-}
 
-PackageQueueType IPackageQueue::get_queue_type() const
-{
-	return PackageQueueType();
+	Package::freed_IDs_.insert((*iterator).get_id());
+	Package::assigned_IDs.erase((*iterator).get_id());
 }

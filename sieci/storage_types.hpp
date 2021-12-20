@@ -33,7 +33,7 @@ public:
     const_iterator end() const { return Package_.Stockpile_.end(); }
 
 
-    virtual void push(Package&& Pac) { Package_.Stockpile_.push_back(Pac); };
+    virtual void push(Package&& Pac) { Package_.Stockpile_.emplace_back(Pac); };
     virtual bool empty() const { return Package_.Stockpile_.empty(); };
     virtual size_t size() const { return Package_.Stockpile_.size(); };
 
@@ -59,11 +59,10 @@ private:
 class PackageQueue : IPackageQueue
 {
 public:
-    PackageQueue(PackageQueueType type) : Stockpile_([]), type_(type) {}
+    PackageQueue(PackageQueueType type, std::list<Package> list = {}) : type_(type), Stockpile_(list) {}
 
-private:
-    std::list<Package> Stockpile_;
     PackageQueueType type_;
+    std::list<Package> Stockpile_;
 };
 
 
