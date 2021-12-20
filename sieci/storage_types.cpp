@@ -14,15 +14,11 @@
 
 Package IPackageQueue::pop()
 {
-	if (get_queue_type() == FIFO)
+	switch (type_)
 	{
+	case PackageQueueType::FIFO:
 
 	}
-	else if(get_queue_type() == LIFO)
-	{
-
-	}
-
 }
 
 PackageQueueType IPackageQueue::get_queue_type() const
