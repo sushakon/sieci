@@ -43,8 +43,4 @@ private:
     std::size_t id_ = 0;
 };
 
-std::set<ElementID> Package::assigned_IDs = {};
-std::set<ElementID> Package::freed_IDs_ = {};
-
-
 #endif //UNTITLED_PACKAGE_HPP

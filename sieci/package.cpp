@@ -11,3 +11,7 @@
 #include <stack>
 #include <optional>
 #include <string>
+
+
+std::set<ElementID> Package::assigned_IDs = {};
+std::set<ElementID> Package::freed_IDs_ = {};
