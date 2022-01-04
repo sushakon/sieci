@@ -8,7 +8,13 @@
 #include <vector>
 #include <numeric>
 #include <ostream>
+#include <functional>
+
 
 using ElementID = std::size_t;
+using Time = double;
+using TimeOffset = double;
+using ProbabilityGenerator = std::function<double()>;
+
 
 #endif //UNTITLED_TYPES_HPP
