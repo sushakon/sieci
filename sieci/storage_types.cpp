@@ -12,7 +12,7 @@
 #include <optional>
 #include <string>
 
-Package IPackageQueue::pop()
+void IPackageQueue::pop()
 {
 	const_iterator iterator;
 

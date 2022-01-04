@@ -47,7 +47,7 @@ class IPackageQueue : private IPackageStockpile
 {
 public:
 
-    virtual Package pop();
+    virtual void pop();
 
     virtual PackageQueueType get_queue_type() const { return Package_.type_; };
 
