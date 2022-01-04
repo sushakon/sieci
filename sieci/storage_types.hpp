@@ -16,6 +16,10 @@
 #include "package.hpp"
 
 
+class IPackageStockpile;
+class IPackageQueue;
+class PackageQueue;
+
 enum class PackageQueueType {
     FIFO,
     LIFO
@@ -25,6 +29,9 @@ enum class PackageQueueType {
 class IPackageStockpile
 {
 public:
+
+    IPackageStockpile() = default;
+
     using const_iterator = std::list<Package>::const_iterator;
 
     const_iterator cbegin() const { return Package_.Stockpile_.cbegin(); }
@@ -47,6 +54,8 @@ class IPackageQueue : private IPackageStockpile
 {
 public:
 
+    IPackageQueue() = default;
+
     virtual void pop();
 
     virtual PackageQueueType get_queue_type() const { return Package_.type_; };
@@ -56,14 +65,14 @@ private:
 
 };
 
-class PackageQueue : IPackageQueue
+class PackageQueue : public IPackageQueue
 {
 public:
+    PackageQueue() = default;
     PackageQueue(PackageQueueType type, std::list<Package> list = {}) : type_(type), Stockpile_(list) {};
 
     PackageQueueType type_;
     std::list<Package> Stockpile_;
 };
-
 
 #endif //UNTITLED_STORAGE_TYPES_HPP
