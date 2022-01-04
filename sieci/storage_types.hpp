@@ -43,7 +43,7 @@ private:
     PackageQueue Package_;
 };
 
-class IPackageQueue : IPackageStockpile
+class IPackageQueue : private IPackageStockpile
 {
 public:
 
