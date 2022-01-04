@@ -7,6 +7,7 @@
 
 #include <set>
 #include<iostream>
+#include "types.hpp"
 
 
 class Package {
@@ -28,7 +29,7 @@ public:
 
     Package(ElementID id) { id_ = id; };
     Package(Package&&) = default;
-    Package(Package const &) = default;
+    Package(Package&) = default;
 
     Package& operator = (Package&& Pac) = default;
 
