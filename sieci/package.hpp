@@ -11,6 +11,8 @@
 
 class Package {
 public:
+
+
     Package() {
 
         if (!freed_IDs_.empty()) {
@@ -25,7 +27,8 @@ public:
     };
 
     Package(ElementID id) { id_ = id; };
-    Package(Package&& Pac) = default;
+    Package(Package&&) = default;
+    Package(Package const &) = default;
 
     Package& operator = (Package&& Pac) = default;
 
@@ -42,5 +45,6 @@ private:
 
 std::set<ElementID> Package::assigned_IDs = {};
 std::set<ElementID> Package::freed_IDs_ = {};
+
 
 #endif //UNTITLED_PACKAGE_HPP

@@ -12,22 +12,22 @@
 #include <optional>
 #include <string>
 
-void IPackageQueue::pop()
-{
-	const_iterator iterator;
+void PackageQueue::pop()  {
 
-	switch (Package_.type_)
-	{
-	case PackageQueueType::FIFO:
-		iterator = Package_.Stockpile_.cbegin();
-		Package_.Stockpile_.pop_front();
+    const_iterator iterator;
 
-	case PackageQueueType::LIFO:
-		iterator = Package_.Stockpile_.cend();
-		Package_.Stockpile_.pop_back();
-	}
+    switch (type_)
+    {
+        case PackageQueueType::FIFO:
+            iterator = Stockpile_.cbegin();
+            Stockpile_.pop_front();
 
-	Package::freed_IDs_.insert((*iterator).get_id());
-	Package::assigned_IDs.erase((*iterator).get_id());
+        case PackageQueueType::LIFO:
+            iterator = Stockpile_.cend();
+            Stockpile_.pop_back();
+    }
+
+    Package::freed_IDs_.insert((*iterator).get_id());
+    Package::assigned_IDs.erase((*iterator).get_id());
+
 }
-
