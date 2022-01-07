@@ -23,15 +23,28 @@ enum class ReceiverType {
 class IPackageReceiver
 {
     public:
-        virtual void receive_package(Package&& p);
-        virtual ElementID get_id();
+
+        IPackageReceiver() = default;
+
+        virtual void receive_package(Package&& p) const = 0;
+        virtual ElementID get_id() const = 0;
+
+        virtual ~IPackageReceiver() = default;
 };
 
 class Storehouse : public IPackageReceiver{
 
     public:
+        Storehouse() = default;
+        Storehouse(ElementID id, std::unique_ptr<IPackageStockpile> d):id_(id), stockpile_(std::move(d)){};
 
-        Storehouse(ElementID id, std::unique_ptr<IPackageStockpile> d);
+        void receive_package(Package&& p)const override {stockpile_->push(p);}
+
+        ElementID get_id() const override {return id_;}
+
+    private:
+        ElementID id_ = 0;
+        std::unique_ptr<IPackageStockpile> stockpile_ ;
 };
 
 class ReceiverPreferences{
@@ -97,12 +110,17 @@ class Ramp: PackageSender
 class Worker : public PackageSender, public IPackageReceiver
 {
     public:
-        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q);
+        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q):id_(id), pd_(pd), queue_(std::move(q)){};
 
         void do_work(Time t);
 
         TimeOffset get_processing_duration();
         Time get_package_processing_start_time();
+
+    private:
+        ElementID id_;
+        TimeOffset pd_;
+        std::unique_ptr<IPackageStockpile> queue_ ;
 };
 
 

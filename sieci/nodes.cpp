@@ -44,3 +44,4 @@ IPackageReceiver* ReceiverPreferences::choose_receiver(){
     return receiver;
 
 };
+

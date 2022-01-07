@@ -40,9 +40,9 @@ public:
     virtual bool empty() const { return Stockpile_.empty(); };
     virtual size_t size() const { return Stockpile_.size(); };
 
-    virtual ~IPackageStockpile() = default;
 
     std::list<Package> Stockpile_ = {};
+    virtual ~IPackageStockpile() = default;
 
 };
 
