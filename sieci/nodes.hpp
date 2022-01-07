@@ -10,6 +10,8 @@
 #include "types.hpp"
 #include "package.hpp"
 #include "storage_types.hpp"
+#include <optional>
+
 
 
 enum class ReceiverType {
@@ -92,7 +94,7 @@ class PackageSender: public ReceiverPreferences{
 
 };
 
-class Ramp: PackageSender
+class Ramp: public PackageSender
 {
     public:
 
