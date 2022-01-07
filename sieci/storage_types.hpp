@@ -30,11 +30,10 @@ public:
 
     using const_iterator = std::list<Package>::const_iterator;
 
-    const_iterator cbegin() const { return Stockpile_.cbegin(); }
-    const_iterator cend() const { return Stockpile_.cend(); }
-    const_iterator begin() const { return Stockpile_.begin(); }
-    const_iterator end() const { return Stockpile_.end(); }
-
+    const_iterator cbegin() const { return Stockpile_.cbegin(); };
+    const_iterator cend() const { return Stockpile_.cend(); };
+    const_iterator begin() const { return Stockpile_.begin(); };
+    const_iterator end() const { return Stockpile_.end(); };
 
     virtual void push(Package&& Pac) { Stockpile_.emplace_back(Pac); };
     virtual bool empty() const { return Stockpile_.empty(); };
@@ -58,7 +57,7 @@ public:
 
 };
 
-class PackageQueue : private IPackageQueue
+class PackageQueue : public IPackageQueue
 {
 public:
     PackageQueue() = default;

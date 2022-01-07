@@ -36,15 +36,15 @@ class Storehouse : public IPackageReceiver{
 
     public:
         Storehouse() = default;
-        Storehouse(ElementID id, std::unique_ptr<IPackageStockpile> d):id_(id), stockpile_(std::move(d)){};
+        Storehouse(ElementID id, std::unique_ptr<IPackageStockpile> d = std::make_unique<PackageQueue>(PackageQueue(PackageQueueType::FIFO))): id_(id), d_(std::move(d)){};
 
-        void receive_package(Package&& p)const override {stockpile_->push(p);}
+        void receive_package(Package&& p)const override {d_->push(std::move(p));};
 
-        ElementID get_id() const override {return id_;}
+        ElementID get_id() const override {return id_;};
 
     private:
-        ElementID id_ = 0;
-        std::unique_ptr<IPackageStockpile> stockpile_ ;
+        ElementID id_;
+        std::unique_ptr<IPackageStockpile> d_ ;
 };
 
 class ReceiverPreferences{
@@ -56,10 +56,10 @@ class ReceiverPreferences{
         using preferences_t = std::map<IPackageReceiver*, double>;
         using const_iterator = preferences_t::const_iterator;
 
-        const_iterator cbegin() const { return preferences_.cbegin(); }
-        const_iterator cend() const { return preferences_.cend(); }
-        const_iterator begin() const { return preferences_.begin(); }
-        const_iterator end() const { return preferences_.end(); }
+        const_iterator cbegin() const { return preferences_.cbegin(); };
+        const_iterator cend() const { return preferences_.cend(); };
+        const_iterator begin() const { return preferences_.begin(); };
+        const_iterator end() const { return preferences_.end(); };
 
         void add_receiver(IPackageReceiver* r);
         void remove_receiver(IPackageReceiver* r);

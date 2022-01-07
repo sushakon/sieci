@@ -28,8 +28,8 @@ public:
     };
 
     Package(ElementID id) { id_ = id; };
-    Package(Package&&) = default;
-    Package(Package&) = default;
+    Package(Package&& p) = default;
+    Package(const Package&) = default;
 
     Package& operator = (Package&& Pac) = default;
 
