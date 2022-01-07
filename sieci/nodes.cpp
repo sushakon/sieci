@@ -5,26 +5,31 @@
 
 void ReceiverPreferences::add_receiver(IPackageReceiver* r){
 
-//    int size = preferences_.size();
-//    size ++;
-//    double step = 1/size;
-//
-//    for (auto it : preferences_) {
-//
-//        it.second = step;
-//        step += step;
-//    }
+    int size = preferences_.size();
+    size ++;
+    double step = 1/size;
+
+    for (auto it : preferences_) {
+
+        it.second = step;
+        step += step;
+    }
+
+    preferences_.insert(preferences_.cend(), {r, 1});
 
 };
 
 void ReceiverPreferences::remove_receiver(IPackageReceiver* r){
 
-    double multiplier = 1/(1 - preferences_[r]);
+
     preferences_.erase(r);
+    int size = preferences_.size();
+    double step = 1/size;
 
-    for (auto it = begin(); it != end(); ++it){
+    for (auto it : preferences_) {
 
-        preferences_[it->first] = it->second * multiplier;
+        it.second = step;
+        step += step;
     }
 
 
@@ -32,12 +37,13 @@ void ReceiverPreferences::remove_receiver(IPackageReceiver* r){
 IPackageReceiver* ReceiverPreferences::choose_receiver(){
 
     IPackageReceiver* receiver;
-    double sum = cbegin()->second;
 
-    for (auto it = begin(); it != end(); ++it){
 
-        if (probability_ < sum){
+    for (auto elem : preferences_){
 
+        if (probability_ < elem.second){
+            receiver = elem.first;
+            break;
         }
     }
 
@@ -45,3 +51,9 @@ IPackageReceiver* ReceiverPreferences::choose_receiver(){
 
 };
 
+
+void PackageSender::send_package(){
+
+    IPackageReceiver* receiver = receiver_preferences_.choose_receiver();
+    receiver->receive_package()
+}

@@ -64,7 +64,7 @@ class ReceiverPreferences{
         void add_receiver(IPackageReceiver* r);
         void remove_receiver(IPackageReceiver* r);
         IPackageReceiver* choose_receiver();
-        preferences_t& get_preferences(){return preferences_;};
+        const preferences_t& get_preferences() const {return  preferences_;};
 
 
         preferences_t preferences_ ;
