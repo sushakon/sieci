@@ -54,6 +54,14 @@ IPackageReceiver* ReceiverPreferences::choose_receiver(){
 
 void PackageSender::send_package(){
 
-    IPackageReceiver* receiver = receiver_preferences_.choose_receiver();
-    receiver->receive_package()
-}
+    if (sending_buffer_.has_value()) {
+        IPackageReceiver* receiver = choose_receiver();
+        receiver->receive_package(std::move(sending_buffer_.value()));
+    }
+    sending_buffer_.reset();
+};
+
+void Worker::push_package(Package&& p){
+
+
+};

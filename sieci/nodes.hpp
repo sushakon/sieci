@@ -81,16 +81,21 @@ class PackageSender: public ReceiverPreferences{
 
     public:
 
-        PackageSender() = default;
+        PackageSender(): receiver_preferences_(), sending_buffer_(std::nullopt){};
         PackageSender(PackageSender&&) = default;
 
         void send_package();
-        std::optional<Package>& get_sending_buffer();
+        std::optional<Package>& get_sending_buffer(){return sending_buffer_;};
 
         ReceiverPreferences receiver_preferences_;
 
+
+
     protected:
-        void push_package(Package&& p);
+        void push_package(Package&& p){sending_buffer_.emplace(p);};
+        std::optional<Package> sending_buffer_ ;
+
+
 
 };
 
@@ -102,6 +107,7 @@ class Ramp: public PackageSender
         void deliver_goods(Time t);
         TimeOffset get_delivery_interval();
         ElementID get_id();
+
 
     private:
         ElementID id_;
@@ -118,6 +124,8 @@ class Worker : public PackageSender, public IPackageReceiver
 
         TimeOffset get_processing_duration();
         Time get_package_processing_start_time();
+
+        void push_package(Package&& p);
 
     private:
         ElementID id_;
