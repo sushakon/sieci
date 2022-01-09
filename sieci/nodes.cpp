@@ -2,6 +2,7 @@
 // Created by Agata on 04.01.2022.
 //
 #include "nodes.hpp"
+#include <cmath>
 
 void ReceiverPreferences::add_receiver(IPackageReceiver* r){
 
@@ -61,7 +62,37 @@ void PackageSender::send_package(){
     sending_buffer_.reset();
 };
 
+
+void Ramp::deliver_goods(Time t) {
+
+    if (std::fmod(t - 1 ,di_) == 0){
+
+        Package Pac (id_);
+        push_package(std::move(Pac));
+    };
+}
+
 void Worker::push_package(Package&& p){
+
+
+};
+
+void Worker::do_work(Time t) {
+
+    if (work_time == 0){
+        start_time_ = t;
+    }
+
+
+    if (work_time == pd_){
+
+        Package Pac (id_);
+        push_package(std::move(Pac));
+        work_time = 0;
+    }
+    else{
+        work_time++;
+    }
 
 
 };

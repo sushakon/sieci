@@ -105,8 +105,8 @@ class Ramp: public PackageSender
 
         Ramp(ElementID id, TimeOffset di): id_(id), di_(di){};
         void deliver_goods(Time t);
-        TimeOffset get_delivery_interval();
-        ElementID get_id();
+        TimeOffset get_delivery_interval(){return di_;};
+        ElementID get_id(){return id_;};
 
 
     private:
@@ -118,12 +118,12 @@ class Ramp: public PackageSender
 class Worker : public PackageSender, public IPackageReceiver
 {
     public:
-        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q):id_(id), pd_(pd), queue_(std::move(q)){};
+        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q):id_(id), pd_(pd), queue_(std::move(q)), start_time_(0), work_time(0){};
 
         void do_work(Time t);
 
-        TimeOffset get_processing_duration();
-        Time get_package_processing_start_time();
+        TimeOffset get_processing_duration(){return pd_;};
+        Time get_package_processing_start_time(){return start_time_;};
 
         void push_package(Package&& p);
 
@@ -131,6 +131,8 @@ class Worker : public PackageSender, public IPackageReceiver
         ElementID id_;
         TimeOffset pd_;
         std::unique_ptr<IPackageStockpile> queue_ ;
+        Time start_time_;
+        Time work_time;
 };
 
 
