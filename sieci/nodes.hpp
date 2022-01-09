@@ -118,7 +118,7 @@ class Ramp: public PackageSender
 class Worker : public PackageSender, public IPackageReceiver
 {
     public:
-        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q):id_(id), pd_(pd), queue_(std::move(q)), start_time_(0), work_time(0){};
+        Worker(ElementID id, TimeOffset pd, std::unique_ptr<IPackageQueue> q = std::make_unique<PackageQueue>(PackageQueue(PackageQueueType::FIFO))):id_(id), pd_(pd), queue_(std::move(q)), start_time_(0), work_time(0){};
 
         void do_work(Time t);
 
@@ -130,7 +130,7 @@ class Worker : public PackageSender, public IPackageReceiver
     private:
         ElementID id_;
         TimeOffset pd_;
-        std::unique_ptr<IPackageStockpile> queue_ ;
+        std::unique_ptr<IPackageQueue> queue_ ;
         Time start_time_;
         Time work_time;
 };

@@ -74,6 +74,8 @@ void Ramp::deliver_goods(Time t) {
 
 void Worker::push_package(Package&& p){
 
+    sending_buffer_.emplace(p);
+    queue_->pop();
 
 };
 
