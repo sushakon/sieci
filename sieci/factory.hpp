@@ -15,24 +15,19 @@
 #include <optional>
 #include <mmcobj.h>
 
-template <class T>
-class mypair {
-    T values [2];
-public:
-    mypair (T first, T second)
-    {
-        values[0]=first; values[1]=second;
-    }
-};
+template <class Node>
 class NodeCollection{
 
-    void add(Node&& node);
-    void remove_by_id(ElementID id);
-    NodeCollection<Node>::iterator find_by_id(ElementID id);
-    NodeCollection<Node>::const_iterator find_by_id(ElementID id);
+    public:
+        using container_t = typename std_container_t<Node>;
+        using iterator = typename container_t::iterator;
+        using const_iterator = typename container_t::const_iterator;
 
-    /iteratory
-};
+        void add(Node&& node);
+        void remove_by_id(ElementID id);
+        NodeCollection<Node>::iterator find_by_id(ElementID id);
+        NodeCollection<Node>::const_iterator find_by_id(ElementID id);
+   };
 
 class Factory{
 
@@ -45,13 +40,13 @@ class Factory{
 
         NodeCollection<Ramp>::const_iterator ramp_cbegin();
         NodeCollection<Ramp>::const_iterator ramp_cend();
-        NodeCollection<Ramp>::const_iterator ramp_begin();
-        NodeCollection<Ramp>::const_iterator ramp_end();
 
-        NodeCollection<Worker>::const_iterator Worker_cbegin();
-        NodeCollection<Worker>::const_iterator Worker_cend();
-        NodeCollection<Worker>::const_iterator Worker_begin();
-        NodeCollection<Worker>::const_iterator Worker_end();
+        NodeCollection<Worker>::const_iterator worker_cbegin();
+        NodeCollection<Worker>::const_iterator worker_cend();
+
+        NodeCollection<Storehouse>::const_iterator storehouse_cbegin();
+        NodeCollection<Storehouse>::const_iterator storehouse_cend();
+
 
         bool is_consistent();
         void do_deliveries(Time);
