@@ -15,11 +15,10 @@
 
 
 enum class ReceiverType {
-    rampa,
-    robotnik,
-    magazyn
-};
 
+    WORKER,
+    STOREHOUSE
+};
 
 
 class IPackageReceiver
@@ -30,6 +29,7 @@ class IPackageReceiver
 
         virtual void receive_package(Package&& p) const = 0;
         virtual ElementID get_id() const = 0;
+        virtual ReceiverType get_receiver_type() const = 0;
 
         virtual ~IPackageReceiver() = default;
 };
@@ -43,6 +43,7 @@ class Storehouse : public IPackageReceiver{
         void receive_package(Package&& p)const override {d_->push(std::move(p));};
 
         ElementID get_id() const override {return id_;};
+        ReceiverType get_receiver_type()const override {return ReceiverType::STOREHOUSE;}
 
     private:
         ElementID id_;
@@ -124,6 +125,8 @@ class Worker : public PackageSender, public IPackageReceiver
 
         TimeOffset get_processing_duration(){return pd_;};
         Time get_package_processing_start_time(){return start_time_;};
+
+        ReceiverType get_receiver_type()const override {return ReceiverType::WORKER;}
 
         void push_package(Package&& p);
 
