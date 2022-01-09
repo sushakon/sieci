@@ -19,7 +19,7 @@ template <class Node>
 class NodeCollection{
 
     public:
-        using container_t = typename std_container_t<Node>;
+        using container_t = typename std::list<Node>;
         using iterator = typename container_t::iterator;
         using const_iterator = typename container_t::const_iterator;
 
@@ -27,6 +27,11 @@ class NodeCollection{
         void remove_by_id(ElementID id);
         NodeCollection<Node>::iterator find_by_id(ElementID id);
         NodeCollection<Node>::const_iterator find_by_id(ElementID id);
+
+        NodeCollection<Node>::const_iterator _cbegin() { return container_t.cbegin(); };
+        NodeCollection<Node>::const_iterator _cend() { return container_t.cend(); };
+        NodeCollection<Node>::const_iterator _begin() { return container_t.begin(); };
+        NodeCollection<Node>::const_iterator _end() { return container_t.end(); };
    };
 
 class Factory{
@@ -38,7 +43,7 @@ class Factory{
 
         NodeCollection<Ramp>::const_iterator find_ramp_by_id(ElementID id);
 
-        NodeCollection<Ramp>::const_iterator ramp_cbegin();
+        NodeCollection<Ramp>::const_iterator ramp_cbegin() { return NodeCollection<Ramp>::_cbegin(); };
         NodeCollection<Ramp>::const_iterator ramp_cend();
 
         void add_worker(Worker&&) {};
