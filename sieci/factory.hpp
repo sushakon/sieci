@@ -41,8 +41,20 @@ class Factory{
         NodeCollection<Ramp>::const_iterator ramp_cbegin();
         NodeCollection<Ramp>::const_iterator ramp_cend();
 
+        void add_worker(Worker&&) {};
+        void remove_worker(ElementID id);
+        NodeCollection<Worker>::iterator find_worker_by_id(ElementID id);
+
+        NodeCollection<Worker>::const_iterator find_worker_by_id(ElementID id);
+
         NodeCollection<Worker>::const_iterator worker_cbegin();
         NodeCollection<Worker>::const_iterator worker_cend();
+
+        void add_storehouse(Storehouse&&) {};
+        void remove_storehouse(ElementID id);
+        NodeCollection<Storehouse>::iterator find_storehouse_by_id(ElementID id);
+
+        NodeCollection<Storehouse>::const_iterator find_storehouse_by_id(ElementID id);
 
         NodeCollection<Storehouse>::const_iterator storehouse_cbegin();
         NodeCollection<Storehouse>::const_iterator storehouse_cend();
