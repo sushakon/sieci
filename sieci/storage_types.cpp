@@ -1,33 +1,16 @@
-//
-// Created by mawolny on 14.12.2021.
-//
-
-#include<iostream>
-#include<vector>
-#include <algorithm>
-#include <stack>
-#include <optional>
-#include <string>
-
 #include "storage_types.hpp"
-#include "package.hpp"
 
-void PackageQueue::pop()  {
+Package PackageQueue::pop() {
 
-    const_iterator iterator;
+    if (get_queue_type() == PackageQueueType::FIFO) {
+        Package package = std::move(stockpile_.front());
+        stockpile_.pop_front();
+        return package;
 
-    switch (type_)
-    {
-        case PackageQueueType::FIFO:
-            iterator = Stockpile_.cbegin();
-            Stockpile_.pop_front();
+    } else {
 
-        case PackageQueueType::LIFO:
-            iterator = Stockpile_.cend();
-            Stockpile_.pop_back();
+        Package package = std::move(stockpile_.back());
+        stockpile_.pop_back();
+        return package;
     }
-
-    Package::freed_IDs_.insert((*iterator).get_id());
-    Package::assigned_IDs.erase((*iterator).get_id());
-
 }

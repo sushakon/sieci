@@ -1,66 +1,64 @@
 //
 // Created by Agata on 04.01.2022.
 //
-#include "nodes.hpp"
-#include <cmath>
 
-void ReceiverPreferences::add_receiver(IPackageReceiver* r){
+#include "nodes.hpp"
+#include <numeric>
+#include <utility>
+#include "iterator"
+
+Time Worker::time_ = 0;
+
+void ReceiverPreferences::add_receiver(IPackageReceiver * r) {
 
     int size = preferences_.size();
     size ++;
     double step = 1/size;
 
-    for (auto it : preferences_) {
+    for (auto &it : preferences_) {
 
         it.second = step;
         step += step;
     }
 
-    preferences_.insert(preferences_.cend(), {r, 1});
+    preferences_.insert(std::pair<IPackageReceiver*, double>(r, 1));
+}
 
-};
+void ReceiverPreferences::remove_receiver(IPackageReceiver * r) {
 
-void ReceiverPreferences::remove_receiver(IPackageReceiver* r){
+    if(preferences_.count(r)) {
+        preferences_.erase(r);
 
-
-    preferences_.erase(r);
-    int size = preferences_.size();
-    double step = 1/size;
-
-    for (auto it : preferences_) {
-
-        it.second = step;
-        step += step;
-    }
-
-
-};
-IPackageReceiver* ReceiverPreferences::choose_receiver(){
-
-    IPackageReceiver* receiver;
-
-
-    for (auto elem : preferences_){
-
-        if (probability_ < elem.second){
-            receiver = elem.first;
-            break;
+        for (auto &it: preferences_) {
+            it.second = 1.0 / preferences_.size();
         }
+    }
+}
+
+
+IPackageReceiver* ReceiverPreferences::choose_receiver() {
+
+    IPackageReceiver *receiver = nullptr;
+
+    double sum = 0;
+
+    for(auto it: preferences_){
+        sum += it.second;
+        if(probability_ < sum)
+            return it.first;
     }
 
     return receiver;
+}
 
-};
+void PackageSender::send_package() {
 
-
-void PackageSender::send_package(){
-
-    if (sending_buffer_.has_value()) {
-        IPackageReceiver* receiver = choose_receiver();
+    if(sending_buffer_.has_value()){
+        IPackageReceiver* receiver = receiver_preferences_.choose_receiver();
         receiver->receive_package(std::move(sending_buffer_.value()));
+        sending_buffer_.reset();
     }
-    sending_buffer_.reset();
-};
+}
 
 
 void Ramp::deliver_goods(Time t) {
@@ -72,29 +70,21 @@ void Ramp::deliver_goods(Time t) {
     };
 }
 
-void Worker::push_package(Package&& p){
-
-    sending_buffer_.emplace(p);
-    queue_->pop();
-
-};
 
 void Worker::do_work(Time t) {
-
-    if (work_time == 0){
-        start_time_ = t;
+    if(time_ == 0 && !q_->empty()) {
+        time_ = t;
+        prepare_package(q_->pop());
+    }
+    if(t - time_ == pd_ - 1){
+        push_package(std::move(buffor_.value()));
+        time_ = 0;
+        buffor_.reset();
+        if(!q_->empty()) {
+            time_ = t;
+            prepare_package(q_->pop());
+        }
     }
 
 
-    if (work_time == pd_){
-
-        Package Pac (id_);
-        push_package(std::move(Pac));
-        work_time = 0;
-    }
-    else{
-        work_time++;
-    }
-
-
-};
+}
