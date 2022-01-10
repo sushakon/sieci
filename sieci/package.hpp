@@ -1,47 +1,74 @@
-//
-// Created by mawolny on 14.12.2021.
-//
+#ifndef PACKAGE_HPP
+#define PACKAGE_HPP
 
-#ifndef UNTITLED_PACKAGE_HPP
-#define UNTITLED_PACKAGE_HPP
-
+#include <iostream>
 #include <set>
-#include<iostream>
 #include "types.hpp"
 
-
 class Package {
-public:
+
+    public:
+
+        Package(){
+
+            if (!freed_IDs_.empty()) {
+                ElementID first = *freed_IDs_.begin();
+                for (const auto el: freed_IDs_) {
+                    if (el < first)
+                        first = el;
+                }
+                id_ = first;
+                assigned_IDs.insert(first);
+            }
+            else {
+                ElementID last = *assigned_IDs.begin();
+                for (const auto el: assigned_IDs) {
+                    if (el > last)
+                        last = el;
+                }
+                id_ = last + 1;
+                assigned_IDs.insert(last + 1);
+            }
+        };
 
 
-    Package() {
+        Package(const Package&) = default;
 
-        if (!freed_IDs_.empty()) {
-            id_ = *freed_IDs_.cbegin();
-            freed_IDs_.erase(0);
-        }
-        else {
-            ElementID el = *assigned_IDs.cend()++;
-            id_ = el;
-            assigned_IDs.insert(el);
-        }
-    };
+        Package(ElementID id){
+            id_ = id;
+            assigned_IDs.insert(id);
+            if (freed_IDs_.find(id) != freed_IDs_.end()) {
+                freed_IDs_.erase(id);
+            }
+        };
 
-    Package(ElementID id) { id_ = id; };
-    Package(Package&& p) = default;
-    Package(const Package&) = default;
+        Package(Package &&) = default;
 
-    Package& operator = (Package&& Pac) = default;
 
-    ElementID get_id() const { return id_; };
+        ElementID get_id() const { return id_; }
 
-    ~Package() = default;
+        Package& operator=(Package&&) = default;
 
-    static std::set<ElementID> assigned_IDs;
-    static std::set<ElementID> freed_IDs_;
+        ~Package(){
+            if (id_ != Null_id_) {
+                if (freed_IDs_.find(id_) == freed_IDs_.end()) {
+                    freed_IDs_.insert(id_);
+                }
+                if (assigned_IDs.find(id_) == assigned_IDs.end()) {
+                    assigned_IDs.insert(id_);
+                }
+            }
+        };
 
-private:
-    std::size_t id_ = 0;
+
+    private:
+
+        static std::set<ElementID> assigned_IDs;
+        static std::set<ElementID> freed_IDs_;
+
+        static const ElementID Null_id_ = -1;
+        ElementID id_ = Null_id_;
+
 };
 
-#endif //UNTITLED_PACKAGE_HPP
+#endif //PACKAGE_HPP

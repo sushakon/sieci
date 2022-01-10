@@ -1,31 +1,16 @@
-//
-// Created by mawolny on 14.12.2021.
-//
 
-#ifndef UNTITLED_STORAGE_TYPES_HPP
-#define UNTITLED_STORAGE_TYPES_HPP
+#ifndef STORAGE_TYPES_HPP
+#define STORAGE_TYPES_HPP
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <stack>
-#include <list>
-#include <queue>
 
-#include "types.hpp"
 #include "package.hpp"
+#include <list>
+#include <deque>
+#include <optional>
 
 
-enum class PackageQueueType {
-    FIFO,
-    LIFO
-};
-
-
-class IPackageStockpile
-{
+class IPackageStockpile {
 public:
-
     IPackageStockpile() = default;
 
     using const_iterator = std::list<Package>::const_iterator;
@@ -41,33 +26,49 @@ public:
 
 
     std::list<Package> Stockpile_ = {};
+
     virtual ~IPackageStockpile() = default;
 
 };
 
-class IPackageQueue : public IPackageStockpile
-{
+enum class PackageQueueType {
+    FIFO, LIFO
+};
+
+
+
+
+class IPackageQueue : public IPackageStockpile {
 public:
 
     IPackageQueue() = default;
 
-    virtual void pop() = 0;
+    virtual Package pop() = 0;
     virtual PackageQueueType get_queue_type() const = 0;
+};
 
+
+
+class PackageQueue : public IPackageQueue {
+
+    public:
+
+        PackageQueue() = default;
+        PackageQueue(PackageQueueType type): type_(type), stockpile_(0){};
+        void push(Package&& package) override { stockpile_.emplace_back(std::move(package)); }
+
+        bool empty() const override { return stockpile_.empty(); }
+        Package pop() override;
+
+        PackageQueueType get_queue_type() const override {return type_;};
+        std::list<Package>::size_type size() const override { return stockpile_.size(); }
+
+
+    private:
+
+        PackageQueueType type_;
+        std::list<Package> stockpile_;
 
 };
 
-class PackageQueue : public IPackageQueue
-{
-public:
-    PackageQueue() = default;
-    PackageQueue(PackageQueueType type): type_(type){};
-
-    PackageQueueType get_queue_type() const override {return type_;}
-    void pop() override;
-
-private:
-    PackageQueueType type_;
-};
-
-#endif //UNTITLED_STORAGE_TYPES_HPP
+#endif //STORAGE_TYPES_HPP

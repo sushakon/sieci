@@ -2,76 +2,134 @@
 // Created by Agata on 04.01.2022.
 //
 
-#ifndef SIECI_FACTORY_HPP
-#define SIECI_FACTORY_HPP
+#ifndef FACTORY_HPP
+#define FACTORY_HPP
 
-
-#include <map>
-#include <memory>
-#include "nodes.hpp"
 #include "types.hpp"
+#include "nodes.hpp"
 #include "package.hpp"
 #include "storage_types.hpp"
+#include <algorithm>
 #include <optional>
-#include <mmcobj.h>
+#include "string"
+#include <list>
+#include <sstream>
 
 template <class Node>
-class NodeCollection{
+class NodeCollection {
 
     public:
         using container_t = typename std::list<Node>;
         using iterator = typename container_t::iterator;
         using const_iterator = typename container_t::const_iterator;
 
-        void add(Node&& node);
-        void remove_by_id(ElementID id);
-        NodeCollection<Node>::iterator find_by_id(ElementID id);
-        NodeCollection<Node>::const_iterator find_by_id(ElementID id);
 
-        NodeCollection<Node>::const_iterator _cbegin() { return container_t.cbegin(); };
-        NodeCollection<Node>::const_iterator _cend() { return container_t.cend(); };
-        NodeCollection<Node>::const_iterator _begin() { return container_t.begin(); };
-        NodeCollection<Node>::const_iterator _end() { return container_t.end(); };
-   };
+        iterator begin() {return nlist_.begin(); }
+        iterator end() {return nlist_.end(); }
+        const_iterator cbegin() const {return nlist_.cbegin(); }
+        const_iterator cend() const {return nlist_.cend(); }
+        const_iterator begin() const {return nlist_.begin(); }
+        const_iterator end() const {return nlist_.end(); }
 
-class Factory{
+        void add(Node& node) {nlist_.push_back(std::move(node)); }
 
-    public:
-        void add_ramp(Ramp&&){};
-        void remove_ramp(ElementID id);
-        NodeCollection<Ramp>::iterator find_ramp_by_id(ElementID id);
+        void remove_by_id(ElementID id){
 
-        NodeCollection<Ramp>::const_iterator find_ramp_by_id(ElementID id);
+            auto it = find_by_id(id);
+            if (it != nlist_.end()) {
+                nlist_.erase(it);
+            }
+        };
 
-        NodeCollection<Ramp>::const_iterator ramp_cbegin() { return NodeCollection<Ramp>::_cbegin(); };
-        NodeCollection<Ramp>::const_iterator ramp_cend();
+        iterator find_by_id(ElementID id_) {
 
-        void add_worker(Worker&&) {};
-        void remove_worker(ElementID id);
-        NodeCollection<Worker>::iterator find_worker_by_id(ElementID id);
+            auto it = std::find_if(nlist_.begin(), nlist_.end(),
+                                   [id_](const auto& elem) { return (elem.get_id() == id_); });
+            return it;
+        };
 
-        NodeCollection<Worker>::const_iterator find_worker_by_id(ElementID id);
+        const_iterator find_by_id(ElementID id_) const {
 
-        NodeCollection<Worker>::const_iterator worker_cbegin();
-        NodeCollection<Worker>::const_iterator worker_cend();
-
-        void add_storehouse(Storehouse&&) {};
-        void remove_storehouse(ElementID id);
-        NodeCollection<Storehouse>::iterator find_storehouse_by_id(ElementID id);
-
-        NodeCollection<Storehouse>::const_iterator find_storehouse_by_id(ElementID id);
-
-        NodeCollection<Storehouse>::const_iterator storehouse_cbegin();
-        NodeCollection<Storehouse>::const_iterator storehouse_cend();
-
-
-        bool is_consistent();
-        void do_deliveries(Time);
-        void do_package_passing();
-        void do_work(Time);
+            auto it = std::find_if(nlist_.cbegin(), nlist_.cend(), [id_](const auto& elem){ return (elem.get_id() == id_);});
+            return it;
+        };
 
     private:
+
+        container_t nlist_;
+
+};
+
+
+class Factory {
+
+    public:
+
+        void add_ramp(Ramp&& r) { ramps_list_.add(r); }
+
+        void remove_ramp(ElementID id){ramps_list_.remove_by_id(id);};
+
+        NodeCollection<Ramp>::iterator find_ramp_by_id(ElementID id) {return ramps_list_.find_by_id(id); }
+        NodeCollection<Ramp>::const_iterator find_ramp_by_id(ElementID id) const {return ramps_list_.find_by_id(id); }
+
+
+        NodeCollection<Ramp>::const_iterator ramp_cbegin() const {return ramps_list_.cbegin(); }
+        NodeCollection<Ramp>::const_iterator ramp_cend() const {return ramps_list_.cend(); }
+        NodeCollection<Ramp>::const_iterator ramp_begin() const {return ramps_list_.begin(); }
+        NodeCollection<Ramp>::const_iterator ramp_end() const {return ramps_list_.end(); }
+        NodeCollection<Ramp>::iterator ramp_begin()  {return ramps_list_.begin(); }
+        NodeCollection<Ramp>::iterator ramp_end()  {return ramps_list_.end(); }
+
+
+        void add_storehouse(Storehouse&& s) {storeh_list_.add(s); }
+
+        void remove_storehouse(ElementID id);
+        NodeCollection<Storehouse>::iterator find_storehouse_by_id(ElementID id) {return storeh_list_.find_by_id(id); }
+        NodeCollection<Storehouse>::const_iterator find_storehouse_by_id(ElementID id) const {return storeh_list_.find_by_id(id); }
+
+
+        NodeCollection<Storehouse>::const_iterator storehouse_cbegin() const {return storeh_list_.cbegin(); }
+        NodeCollection<Storehouse>::const_iterator storehouse_cend() const {return storeh_list_.cend(); }
+        NodeCollection<Storehouse>::const_iterator storehouse_begin() const {return storeh_list_.begin(); }
+        NodeCollection<Storehouse>::const_iterator storehouse_end() const {return storeh_list_.end(); }
+        NodeCollection<Storehouse>::iterator storehouse_begin()  {return storeh_list_.begin(); }
+        NodeCollection<Storehouse>::iterator storehouse_end()  {return storeh_list_.end(); }
+
+
+        void add_worker(Worker&& w) {workers_list_.add(w);};
+        void remove_worker(ElementID id);
+
+        NodeCollection<Worker>::iterator find_worker_by_id(ElementID id) {return workers_list_.find_by_id(id);};
+        NodeCollection<Worker>::const_iterator find_worker_by_id(ElementID id) const {return workers_list_.find_by_id(id);};
+
+        NodeCollection<Worker>::const_iterator worker_cbegin() const {return workers_list_.cbegin(); }
+        NodeCollection<Worker>::const_iterator worker_cend() const {return workers_list_.cend(); }
+        NodeCollection<Worker>::const_iterator worker_begin() const {return workers_list_.begin(); }
+        NodeCollection<Worker>::const_iterator worker_end() const {return workers_list_.end(); }
+        NodeCollection<Worker>::iterator worker_begin() {return workers_list_.begin(); }
+        NodeCollection<Worker>::iterator worker_end() {return workers_list_.end(); }
+
+
+        bool is_consistent() const;
+        void do_deliveries(Time t);
+        void do_package_passing();
+        void do_work(Time t);
+
+    private:
+        NodeCollection<Worker> workers_list_;
+        NodeCollection<Ramp> ramps_list_;
+        NodeCollection<Storehouse> storeh_list_;
+        template <class Node>
+
         void remove_receiver(NodeCollection<Node>& collection, ElementID id);
 };
 
-#endif //SIECI_FACTORY_HPP
+
+
+
+class ExceptionForHasReachable : public std::logic_error {
+public:
+    ExceptionForHasReachable() : std::logic_error("nope") {}
+};
+
+#endif //FACTORY_HPP
