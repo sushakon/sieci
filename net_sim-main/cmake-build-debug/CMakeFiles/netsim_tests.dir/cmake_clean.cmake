@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/netsim_tests.dir/netsim_tests/test/test_factory_io.cpp.obj"
   "CMakeFiles/netsim_tests.dir/netsim_tests/test/test_nodes.cpp.obj"
   "CMakeFiles/netsim_tests.dir/netsim_tests/test/test_package.cpp.obj"
-  "CMakeFiles/netsim_tests.dir/netsim_tests/test/test_reports.cpp.obj"
   "CMakeFiles/netsim_tests.dir/netsim_tests/test/test_storage_types.cpp.obj"
   "CMakeFiles/netsim_tests.dir/src/factory.cpp.obj"
   "CMakeFiles/netsim_tests.dir/src/helpers.cpp.obj"

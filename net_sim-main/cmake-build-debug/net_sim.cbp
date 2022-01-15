@@ -420,9 +420,6 @@
 		<Unit filename="C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/test_package.cpp">
 			<Option target="netsim_tests"/>
 		</Unit>
-		<Unit filename="C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/test_reports.cpp">
-			<Option target="netsim_tests"/>
-		</Unit>
 		<Unit filename="C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/test_storage_types.cpp">
 			<Option target="netsim_tests"/>
 		</Unit>

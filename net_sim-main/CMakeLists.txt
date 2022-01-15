@@ -27,7 +27,7 @@ set(SOURCE_FILES_TESTS
         netsim_tests/test/test_factory_io.cpp
         netsim_tests/test/test_nodes.cpp
         netsim_tests/test/test_package.cpp
-        netsim_tests/test/test_reports.cpp
+        #netsim_tests/test/test_reports.cpp
         #        netsim_tests/test/test_simulate.cpp
         netsim_tests/test/test_storage_types.cpp
         )

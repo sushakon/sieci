@@ -44,10 +44,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Google Test.FactoryTest.IsConsistentCorrect">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="Google Test.All in test_nodes.cpp">
+    <configuration name="All in test_nodes.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/test_nodes.cpp)" TEST_MODE="PATTERN">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="FactoryTest.IsConsistentCorrect" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_CLASS="FactoryTest" TEST_METHOD="IsConsistentCorrect" TEST_MODE="SUITE_TEST">
@@ -60,6 +61,11 @@
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="gmock" CONFIG_NAME="Debug">
@@ -114,10 +120,12 @@
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="Google Test.netsim_tests" />
       <item itemvalue="Google Test.FactoryTest.IsConsistentCorrect" />
+      <item itemvalue="Google Test.All in test_nodes.cpp" />
       <item itemvalue="Python tests.Unittests in test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in test_nodes.cpp" />
         <item itemvalue="Google Test.FactoryTest.IsConsistentCorrect" />
         <item itemvalue="Python tests.Unittests in test" />
       </list>
@@ -145,7 +153,8 @@
       <workItem from="1641757519483" duration="8414000" />
       <workItem from="1641832685990" duration="11021000" />
       <workItem from="1641853478504" duration="2210000" />
-      <workItem from="1642268087050" duration="77000" />
+      <workItem from="1642268087050" duration="207000" />
+      <workItem from="1642269110150" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="kupa dupa">
       <created>1640083372916</created>

@@ -11,9 +11,9 @@ Time Worker::time_ = 0;
 
 void ReceiverPreferences::add_receiver(IPackageReceiver * r) {
 
-    preferences_.insert(std::pair<IPackageReceiver*, double>(r, rand_()));
+    preferences_.emplace(r, 1);
     for(auto & el : preferences_) {
-        el.second = 1.0 / (double)preferences_.size();
+        el.second = 1.0 / (double)(preferences_.size());
     }
 }
 
@@ -23,7 +23,7 @@ void ReceiverPreferences::remove_receiver(IPackageReceiver * r) {
     if(preferences_.size() != 0) {
 
         for (auto it = preferences_.begin(); it != preferences_.end(); it++) {
-            it->second = 1.0 / (double)preferences_.size();
+            it->second = 1.0 / (double)(preferences_.size());
         }
     }
 }
