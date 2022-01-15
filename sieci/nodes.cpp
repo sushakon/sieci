@@ -11,17 +11,10 @@ Time Worker::time_ = 0;
 
 void ReceiverPreferences::add_receiver(IPackageReceiver * r) {
 
-    int size = preferences_.size();
-    size ++;
-    double step = 1/size;
-
-    for (auto &it : preferences_) {
-
-        it.second = step;
-        step += step;
+    preferences_.insert(std::pair<IPackageReceiver*, double>(r, rand_()));
+    for(auto & el : preferences_) {
+        el.second = 1.0 / preferences_.size();
     }
-
-    preferences_.insert(std::pair<IPackageReceiver*, double>(r, 1));
 }
 
 void ReceiverPreferences::remove_receiver(IPackageReceiver * r) {
@@ -40,15 +33,17 @@ IPackageReceiver* ReceiverPreferences::choose_receiver() {
 
     IPackageReceiver *receiver = nullptr;
 
+    double nb = rand_();
     double sum = 0;
 
-    for(auto it: preferences_){
+    for(auto &it: preferences_){
         sum += it.second;
-        if(probability_ < sum)
+        if(nb < sum)
             return it.first;
     }
 
     return receiver;
+
 }
 
 void PackageSender::send_package() {
