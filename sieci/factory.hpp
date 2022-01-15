@@ -132,4 +132,17 @@ public:
     ExceptionForHasReachable() : std::logic_error("nope") {}
 };
 
+enum class ElementType{
+    LOADING_RAMP, WORKER, STOREHOUSE, LINK
+};
+
+struct ParsedLineData {
+    ElementType element_type;
+    std::map<std::string, std::string> parameters;
+};
+
+ParsedLineData parse_line(const std::string& line);
+Factory load_factory_structure(std::istream& is);
+void save_factory_structure(Factory& factory, std::ostream& os);
+
 #endif //FACTORY_HPP

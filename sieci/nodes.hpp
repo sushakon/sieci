@@ -76,7 +76,7 @@ class ReceiverPreferences {
 
 
         ReceiverPreferences() = default;
-        ReceiverPreferences(ProbabilityGenerator pg){probability_ = pg();};
+        ReceiverPreferences(ProbabilityGenerator pg){probability_ = pg();rand_ = std::move(pg);};
 
 //        ReceiverPreferences(ProbabilityGenerator pg = probability_generator);
 
@@ -96,6 +96,7 @@ class ReceiverPreferences {
 
     private:
         double probability_ = 0;
+        ProbabilityGenerator rand_;
         preferences_t preferences_ ;
 
 };
@@ -163,6 +164,12 @@ public:
 
     ElementID get_id() const override {return id_; }
     void prepare_package(Package&& p) { buffor_ = std::move(p); }
+
+    IPackageQueue* get_queue() const {return q_.get();}
+    std::optional<Package>& get_processing_buffer() const {return (std::optional<Package>&) buffor_; }
+
+
+
     static Time time_;
 
 private:

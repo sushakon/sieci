@@ -42,12 +42,27 @@ class Package {
             }
         };
 
-        Package(Package &&) = default;
+        Package(Package && other){
+
+            id_ = other.id_;
+            other.id_ = Null_id_;
+        }
 
 
         ElementID get_id() const { return id_; }
 
-        Package& operator=(Package&&) = default;
+        Package& operator=(Package&& other) {
+
+            if (id_ != Null_id_) {
+            freed_IDs_.insert(id_);
+            assigned_IDs.erase(id_);
+    }
+
+    id_ = other.id_;
+    other.id_ = Null_id_;
+
+    return *this;
+}
 
         ~Package(){
             if (id_ != Null_id_) {
