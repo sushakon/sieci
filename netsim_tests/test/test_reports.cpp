@@ -23,8 +23,8 @@ void perform_report_check(std::function<void(std::ostringstream&)>& reporting_fu
     }
 
     std::ostringstream expected_report_oss;
-    for (auto& line : expected_report_lines) {
-        expected_report_oss << line << "\n";
+    for (auto& l : expected_report_lines) {
+        expected_report_oss << l << "\n";
     }
 
     ASSERT_EQ(output_lines.size(), output_lines.size());
@@ -41,13 +41,13 @@ void perform_report_check(std::function<void(std::ostringstream&)>& reporting_fu
     }
 }
 
-void perform_turn_report_check(const Factory& factory, Time t, std::vector<std::string>& expected_report_lines) {
+void perform_turn_report_check(Factory& factory, Time t, std::vector<std::string>& expected_report_lines) {
     std::function<void(std::ostringstream&)> reporting_function = [&factory, t](
             std::ostringstream& oss) { generate_simulation_turn_report(factory, oss, t); };
     perform_report_check(reporting_function, expected_report_lines);
 }
 
-void perform_structure_report_check(const Factory& factory, std::vector<std::string>& expected_report_lines) {
+void perform_structure_report_check(Factory& factory, std::vector<std::string>& expected_report_lines) {
     std::function<void(std::ostringstream&)> reporting_function = [&factory](
             std::ostringstream& oss) { generate_structure_report(factory, oss); };
     perform_report_check(reporting_function, expected_report_lines);
@@ -251,47 +251,6 @@ TEST(ReportsTest, TurnReportPackageInProcessingBuffer) {
     perform_turn_report_check(factory, t, expected_report_lines);
 }
 
-TEST(ReportsTest, TurnReportPackageInQueue) {
-    // Utwórz fabrykę.
-    Factory factory;
-
-    factory.add_ramp(Ramp(1, 10));
-    factory.add_worker(Worker(1, 2, std::make_unique<PackageQueue>(PackageQueueType::FIFO)));
-    factory.add_storehouse(Storehouse(1));
-
-    Ramp& r = *(factory.find_ramp_by_id(1));
-    r.receiver_preferences_.add_receiver(&(*factory.find_worker_by_id(1)));
-
-    Worker& w = *(factory.find_worker_by_id(1));
-    w.receiver_preferences_.add_receiver(&(*factory.find_storehouse_by_id(1)));
-
-    // Ustaw warunki początkowe symulacji.
-    Time t = 1;
-    r.deliver_goods(t);
-    r.send_package();
-
-    // -----------------------------------------------------------------------
-
-    std::vector<std::string> expected_report_lines{
-            "=== [ Turn: " + std::to_string(t) + " ] ===",
-            "",
-            "== WORKERS ==",
-            "",
-            "WORKER #1",
-            "  PBuffer: (empty)",
-            "  Queue: #1",
-            "  SBuffer: (empty)",
-            "",
-            "",
-            "== STOREHOUSES ==",
-            "",
-            "STOREHOUSE #1",
-            "  Stock: (empty)",
-            "",
-    };
-
-    perform_turn_report_check(factory, t, expected_report_lines);
-}
 
 TEST(ReportsTest, TurnReportPackageInSendingBuffer) {
     // Utwórz fabrykę.
@@ -335,6 +294,49 @@ TEST(ReportsTest, TurnReportPackageInSendingBuffer) {
 
     perform_turn_report_check(factory, t, expected_report_lines);
 }
+
+TEST(ReportsTest, TurnReportPackageInQueue) {
+    // Utwórz fabrykę.
+    Factory factory;
+
+    factory.add_ramp(Ramp(1, 10));
+    factory.add_worker(Worker(1, 2, std::make_unique<PackageQueue>(PackageQueueType::FIFO)));
+    factory.add_storehouse(Storehouse(1));
+
+    Ramp& r = *(factory.find_ramp_by_id(1));
+    r.receiver_preferences_.add_receiver(&(*factory.find_worker_by_id(1)));
+
+    Worker& w = *(factory.find_worker_by_id(1));
+    w.receiver_preferences_.add_receiver(&(*factory.find_storehouse_by_id(1)));
+
+    // Ustaw warunki początkowe symulacji.
+    Time t = 1;
+    r.deliver_goods(t);
+    r.send_package();
+
+    // -----------------------------------------------------------------------
+
+    std::vector<std::string> expected_report_lines{
+            "=== [ Turn: " + std::to_string(t) + " ] ===",
+            "",
+            "== WORKERS ==",
+            "",
+            "WORKER #1",
+            "  PBuffer: (empty)",
+            "  Queue: #1",
+            "  SBuffer: (empty)",
+            "",
+            "",
+            "== STOREHOUSES ==",
+            "",
+            "STOREHOUSE #1",
+            "  Stock: (empty)",
+            "",
+    };
+
+    perform_turn_report_check(factory, t, expected_report_lines);
+}
+
 
 TEST(ReportsTest, TurnReportPackageInStock) {
     // Utwórz fabrykę.
