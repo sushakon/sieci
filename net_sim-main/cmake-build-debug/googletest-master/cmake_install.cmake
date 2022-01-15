@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/WuBu/Desktop/studia/II_rok/ZPO/net_sim-main/net_sim-main/googletest-master
+# Install script for directory: C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/googletest-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/WuBu/Desktop/studia/II_rok/ZPO/net_sim-main/net_sim-main/cmake-build-debug/googletest-master/googlemock/cmake_install.cmake")
+  include("C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/cmake-build-debug/googletest-master/googlemock/cmake_install.cmake")
 
 endif()
 
