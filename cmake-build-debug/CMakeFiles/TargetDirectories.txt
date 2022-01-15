@@ -1,3 +1,0 @@
-/home/eaiib/mawolny/CLionProjects/sieci/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/eaiib/mawolny/CLionProjects/sieci/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/eaiib/mawolny/CLionProjects/sieci/cmake-build-debug/CMakeFiles/sieci.dir
