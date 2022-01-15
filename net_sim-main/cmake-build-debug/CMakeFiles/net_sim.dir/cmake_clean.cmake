@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/net_sim.dir/src/nodes.cpp.obj"
   "CMakeFiles/net_sim.dir/src/package.cpp.obj"
   "CMakeFiles/net_sim.dir/src/reports.cpp.obj"
-  "CMakeFiles/net_sim.dir/src/simulation.cpp.obj"
   "CMakeFiles/net_sim.dir/src/storage_types.cpp.obj"
   "libnet_sim.dll.a"
   "net_sim.exe"

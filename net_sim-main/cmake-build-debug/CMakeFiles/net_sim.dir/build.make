@@ -146,24 +146,10 @@ CMakeFiles/net_sim.dir/src/reports.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/reports.cpp.s"
 	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\reports.cpp -o CMakeFiles\net_sim.dir\src\reports.cpp.s
 
-CMakeFiles/net_sim.dir/src/simulation.cpp.obj: CMakeFiles/net_sim.dir/flags.make
-CMakeFiles/net_sim.dir/src/simulation.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
-CMakeFiles/net_sim.dir/src/simulation.cpp.obj: ../src/simulation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/net_sim.dir/src/simulation.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\simulation.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\simulation.cpp
-
-CMakeFiles/net_sim.dir/src/simulation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/simulation.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\simulation.cpp > CMakeFiles\net_sim.dir\src\simulation.cpp.i
-
-CMakeFiles/net_sim.dir/src/simulation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/simulation.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\simulation.cpp -o CMakeFiles\net_sim.dir\src\simulation.cpp.s
-
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: ../src/storage_types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/net_sim.dir/src/storage_types.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/net_sim.dir/src/storage_types.cpp.obj"
 	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\storage_types.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\storage_types.cpp
 
 CMakeFiles/net_sim.dir/src/storage_types.cpp.i: cmake_force
@@ -177,7 +163,7 @@ CMakeFiles/net_sim.dir/src/storage_types.cpp.s: cmake_force
 CMakeFiles/net_sim.dir/main.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/main.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/net_sim.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/net_sim.dir/main.cpp.obj"
 	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\main.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\main.cpp
 
 CMakeFiles/net_sim.dir/main.cpp.i: cmake_force
@@ -195,7 +181,6 @@ net_sim_OBJECTS = \
 "CMakeFiles/net_sim.dir/src/nodes.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/package.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/reports.cpp.obj" \
-"CMakeFiles/net_sim.dir/src/simulation.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/storage_types.cpp.obj" \
 "CMakeFiles/net_sim.dir/main.cpp.obj"
 
@@ -207,14 +192,13 @@ net_sim.exe: CMakeFiles/net_sim.dir/src/helpers.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/nodes.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/package.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/reports.cpp.obj
-net_sim.exe: CMakeFiles/net_sim.dir/src/simulation.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/storage_types.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/main.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/build.make
 net_sim.exe: CMakeFiles/net_sim.dir/linklibs.rsp
 net_sim.exe: CMakeFiles/net_sim.dir/objects1.rsp
 net_sim.exe: CMakeFiles/net_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable net_sim.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable net_sim.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\net_sim.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

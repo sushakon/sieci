@@ -44,8 +44,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Google Test.All in test_nodes.cpp">
+  <component name="RunManager" selected="Google Test.All in test_package.cpp">
+    <configuration name="All in test_factory_io.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/test_factory_io.cpp)" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in test_nodes.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/test_nodes.cpp)" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in test_package.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/test_package.cpp)" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in test_reports.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/test_reports.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -98,20 +116,6 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="net_sim" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/netsim_tests/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/netsim_tests/test&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="CMake Application.net_sim" />
       <item itemvalue="CMake Application.gmock" />
@@ -121,13 +125,17 @@
       <item itemvalue="Google Test.netsim_tests" />
       <item itemvalue="Google Test.FactoryTest.IsConsistentCorrect" />
       <item itemvalue="Google Test.All in test_nodes.cpp" />
-      <item itemvalue="Python tests.Unittests in test" />
+      <item itemvalue="Google Test.All in test_reports.cpp" />
+      <item itemvalue="Google Test.All in test_factory_io.cpp" />
+      <item itemvalue="Google Test.All in test_package.cpp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in test_package.cpp" />
+        <item itemvalue="Google Test.All in test_reports.cpp" />
+        <item itemvalue="Google Test.All in test_factory_io.cpp" />
         <item itemvalue="Google Test.All in test_nodes.cpp" />
         <item itemvalue="Google Test.FactoryTest.IsConsistentCorrect" />
-        <item itemvalue="Python tests.Unittests in test" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +162,7 @@
       <workItem from="1641832685990" duration="11021000" />
       <workItem from="1641853478504" duration="2210000" />
       <workItem from="1642268087050" duration="207000" />
-      <workItem from="1642269110150" duration="561000" />
+      <workItem from="1642269110150" duration="4053000" />
     </task>
     <task id="LOCAL-00001" summary="kupa dupa">
       <created>1640083372916</created>

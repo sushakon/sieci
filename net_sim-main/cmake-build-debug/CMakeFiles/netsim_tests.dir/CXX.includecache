@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../include/factory.hpp
+types.hpp
+../include/types.hpp
+nodes.hpp
+../include/nodes.hpp
+package.hpp
+../include/package.hpp
+storage_types.hpp
+../include/storage_types.hpp
+algorithm
+-
+optional
+-
+string
+../include/string
+list
+-
+sstream
+-
+
 ../include/helpers.hpp
 functional
 -
@@ -40,6 +60,12 @@ set
 types.hpp
 ../include/types.hpp
 
+../include/reports.hpp
+nodes.hpp
+../include/nodes.hpp
+factory.hpp
+../include/factory.hpp
+
 ../include/storage_types.hpp
 package.hpp
 ../include/package.hpp
@@ -54,13 +80,7 @@ optional
 functional
 -
 
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/src/nodes.cpp
-nodes.hpp
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/src/nodes.hpp
-numeric
--
-utility
--
-iterator
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/src/iterator
+C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/src/reports.cpp
+reports.hpp
+C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/src/reports.hpp
 

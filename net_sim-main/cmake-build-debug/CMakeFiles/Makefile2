@@ -157,12 +157,12 @@ googletest-master/googletest/clean: googletest-master/googletest/CMakeFiles/gtes
 CMakeFiles/net_sim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\net_sim.dir\build.make CMakeFiles/net_sim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\net_sim.dir\build.make CMakeFiles/net_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17 "Built target net_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target net_sim"
 .PHONY : CMakeFiles/net_sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/net_sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/net_sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/net_sim.dir/rule
@@ -185,7 +185,7 @@ CMakeFiles/netsim_tests.dir/all: googletest-master/googlemock/CMakeFiles/gmock.d
 CMakeFiles/netsim_tests.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target netsim_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target netsim_tests"
 .PHONY : CMakeFiles/netsim_tests.dir/all
 
 # Build rule for subdir invocation for target.
