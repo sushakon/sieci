@@ -1,2 +1,0 @@
-# sieci
-ffffff
