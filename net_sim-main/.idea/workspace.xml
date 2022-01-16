@@ -44,7 +44,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Google Test.All in test_reports.cpp">
+  <component name="RunManager" selected="Google Test.All in main_gtest.cpp">
     <configuration name="All in main_gtest.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/main_gtest.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -126,10 +126,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in main_gtest.cpp" />
         <item itemvalue="Google Test.All in test_reports.cpp" />
         <item itemvalue="Google Test.All in test_nodes.cpp" />
         <item itemvalue="Google Test.All in test_package.cpp" />
-        <item itemvalue="Google Test.All in main_gtest.cpp" />
         <item itemvalue="Google Test.All in test_factory_io.cpp" />
       </list>
     </recent_temporary>
