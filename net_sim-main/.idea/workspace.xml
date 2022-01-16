@@ -44,7 +44,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Google Test.All in main_gtest.cpp">
+  <component name="RunManager" selected="Google Test.All in test_reports.cpp">
     <configuration name="All in main_gtest.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="net_sim" TARGET_NAME="netsim_tests" RUN_TARGET_PROJECT_NAME="net_sim" RUN_TARGET_NAME="netsim_tests" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/netsim_tests/test/main_gtest.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -126,10 +126,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Google Test.All in main_gtest.cpp" />
         <item itemvalue="Google Test.All in test_reports.cpp" />
-        <item itemvalue="Google Test.All in test_nodes.cpp" />
         <item itemvalue="Google Test.All in test_package.cpp" />
+        <item itemvalue="Google Test.All in main_gtest.cpp" />
+        <item itemvalue="Google Test.All in test_nodes.cpp" />
         <item itemvalue="Google Test.All in test_factory_io.cpp" />
       </list>
     </recent_temporary>
@@ -158,7 +158,7 @@
       <workItem from="1641853478504" duration="2210000" />
       <workItem from="1642268087050" duration="207000" />
       <workItem from="1642269110150" duration="4095000" />
-      <workItem from="1642350142537" duration="5577000" />
+      <workItem from="1642350142537" duration="7160000" />
     </task>
     <task id="LOCAL-00001" summary="kupa dupa">
       <created>1640083372916</created>

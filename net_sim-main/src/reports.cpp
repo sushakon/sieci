@@ -116,7 +116,7 @@ void generate_simulation_turn_report(Factory &f, std::ostream &os, Time t) {
 
 
 
-        if ((it->get_sending_buffer().has_value()) && !(it->get_sending_buffer() != std::nullopt) ) {
+        if (it->get_sending_buffer() != std::nullopt) {
 
             os << "  SBuffer: #" << it->get_sending_buffer()->get_id() << "\n";
         }

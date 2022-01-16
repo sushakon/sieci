@@ -69,20 +69,23 @@ void Ramp::deliver_goods(Time t) {
 
 void Worker::do_work(Time t) {
     if(buffor_ == std::nullopt){
-        if(time_ == 0 && !q_->empty()) {
+        if(!q_->empty()) {
             time_ = t;
-            prepare_package(q_->pop());
+            buffor_.emplace(q_->pop());
+        }
+        else{
+            buffor_ = std::nullopt;
         }
     }
     if(buffor_ != std::nullopt) {
         if (t - time_ == pd_ - 1) {
             push_package(std::move(buffor_.value()));
-            time_ = 0;
+            //time_ = 0;
             buffor_.reset();
-            if (!q_->empty()) {
+            /*if (!q_->empty()) {
                 time_ = t;
                 prepare_package(q_->pop());
-            }
+            }*/
         }
     }
 
