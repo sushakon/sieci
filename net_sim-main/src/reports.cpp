@@ -84,18 +84,17 @@ void generate_simulation_turn_report(Factory &f, std::ostream &os, Time t) {
         } else
             os << "  PBuffer: (empty)" << '\n';
         if (!(it->get_queue()->empty())) {
-            os << "  Queue: "; // tutaj for nie działał xd
-            os << it->get_queue()->begin()->get_id();
-            if (it->get_queue()->size() == 1) {
-                for(auto el: *it->get_queue()){
-                    os << "#" << el.get_id();
+            os << "  Queue: ";
+            for (auto el = it->get_queue()->begin(); el != it->get_queue()->end(); el++){
+                if (it->get_queue()->size() == 1) {
+                    os << "#" << el->get_id();
+
+                }
+                else {
+                    os << ", #" << el->get_id();
                 }
             }
-            else {
-                for(auto el: *it->get_queue()) {
-                    os << ", #" << el.get_id();
-                }
-            }
+
             os << "\n";
         } else
             os << "  Queue: (empty)" << '\n';
