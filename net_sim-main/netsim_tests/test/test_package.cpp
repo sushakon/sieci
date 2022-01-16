@@ -10,7 +10,7 @@ TEST(PackageTest, IsAssignedIdLowest) {
 
     Package p1;
     Package p2;
-
+    
     EXPECT_EQ(p1.get_id(), 1);
     EXPECT_EQ(p2.get_id(), 2);
 }
