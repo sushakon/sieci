@@ -1,5 +1,6 @@
 #include "reports.hpp"
 
+
 void generate_structure_report(Factory &f, std::ostream &os) {
     os << '\n';
     os << "== LOADING RAMPS ==" << '\n';
@@ -75,50 +76,79 @@ void generate_simulation_turn_report(Factory &f, std::ostream &os, Time t) {
     os << "=== [ Turn: " << std::to_string(t) << " ] ===" << '\n';
     os << '\n';
     os << "== WORKERS ==" << '\n';
+
+
+
     for (auto it = f.worker_begin(); it != f.worker_end(); it++) {
+
         os << '\n' << "WORKER #" << std::to_string(it->get_id()) << '\n';
+
         if (it->get_processing_buffer() != std::nullopt) {
             os << "  PBuffer: #" << it->get_processing_buffer()->get_id() << " ";
             os << "(pt = " << it->time_ << ")" << '\n';
-
-        } else
+        }
+        else
             os << "  PBuffer: (empty)" << '\n';
+
+
+
         if (!(it->get_queue()->empty())) {
+
+
             os << "  Queue: ";
-            for (auto el = it->get_queue()->begin(); el != it->get_queue()->end(); el++){
-                if (it->get_queue()->size() == 1) {
+
+
+            for (auto el = it->get_queue()->begin(); el != it->get_queue()->end(); el++) {
+
+
+                if (it->get_queue()->size() == 1)
                     os << "#" << el->get_id();
-
-                }
-                else {
+                else
                     os << ", #" << el->get_id();
-                }
-            }
 
+
+
+            }
             os << "\n";
-        } else
+        }
+        else
             os << "  Queue: (empty)" << '\n';
-        if (it->get_sending_buffer() != std::nullopt) {
+
+
+
+        if ((it->get_sending_buffer().has_value()) && !(it->get_sending_buffer() != std::nullopt) ) {
+
             os << "  SBuffer: #" << it->get_sending_buffer()->get_id() << "\n";
-        } else
+        }
+        else
             os << "  SBuffer: (empty)" << '\n';
     }
+
+
+
     os << '\n' << '\n';
 
     os << "== STOREHOUSES ==" << '\n';
+
+
     for (auto it = f.storehouse_begin(); it != f.storehouse_end(); it++) {
+
         os << '\n' << "STOREHOUSE #" << std::to_string(it->get_id()) << '\n';
         if (!(it->get_queue()->empty())) {
             os << "  Stock: ";
-            for (auto &el: *it->get_queue()) { // tutaj for nie działał xd
+
+
+
+            for (auto el = it->get_queue()->begin(); el != it->get_queue()->end(); el++) {
+
+
                 if (it->get_queue()->size() == 1)
-                    os << "#" << el.get_id() << '\n';
+                    os << "#" << el->get_id() << '\n';
                 else
-                    os << ", #" << el.get_id() << '\n';
+                    os << ", #" << el->get_id() << '\n';
             }
         } else
             os << "  Stock: (empty)" << '\n';
     }
     os << '\n';
 }
-

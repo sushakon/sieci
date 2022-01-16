@@ -15,10 +15,15 @@ public:
 
     using const_iterator = std::list<Package>::const_iterator;
 
-    const_iterator cbegin() const { return Stockpile_.cbegin(); };
-    const_iterator cend() const { return Stockpile_.cend(); };
-    const_iterator begin() const { return Stockpile_.begin(); };
-    const_iterator end() const { return Stockpile_.end(); };
+//    const_iterator cbegin() const { return Stockpile_.cbegin(); };
+//    const_iterator cend() const { return Stockpile_.cend(); };
+//    const_iterator begin() const { return Stockpile_.begin(); };
+//    const_iterator end() const { return Stockpile_.end(); };
+
+    virtual const_iterator cbegin() const = 0;
+    virtual const_iterator cend() const = 0;
+    virtual const_iterator begin() const = 0;
+    virtual const_iterator end() const = 0;
 
     virtual void push(Package&& Pac) { Stockpile_.emplace_back(Pac); };
     virtual bool empty() const { return Stockpile_.empty(); };
@@ -53,23 +58,29 @@ public:
 
 class PackageQueue : public IPackageQueue {
 
-    public:
+public:
 
-        PackageQueue() = default;
-        PackageQueue(PackageQueueType type): type_(type), stockpile_(0){};
-        void push(Package&& package) override { stockpile_.emplace_back(std::move(package)); }
+    PackageQueue() = default;
+    PackageQueue(PackageQueueType type): type_(type), stockpile_(0){};
+    void push(Package&& package) override { stockpile_.emplace_back(std::move(package)); }
 
-        bool empty() const override { return stockpile_.empty(); }
-        Package pop() override;
+    bool empty() const override { return stockpile_.empty(); }
+    Package pop() override;
 
-        PackageQueueType get_queue_type() const override {return type_;};
-        std::list<Package>::size_type size() const override { return stockpile_.size(); }
+    PackageQueueType get_queue_type() const override {return type_;};
+    std::list<Package>::size_type size() const override { return stockpile_.size(); }
 
 
-    private:
 
-        PackageQueueType type_;
-        std::list<Package> stockpile_;
+    const_iterator cbegin() const override { return stockpile_.cbegin(); }
+    const_iterator begin() const override { return stockpile_.begin(); }
+    const_iterator cend() const override { return stockpile_.cend(); }
+    const_iterator end() const override { return stockpile_.end(); }
+
+private:
+
+    PackageQueueType type_;
+    std::list<Package> stockpile_;
 
 };
 
