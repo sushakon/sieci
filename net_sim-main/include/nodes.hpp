@@ -107,7 +107,7 @@ class PackageSender {
     public:
 
         PackageSender() : receiver_preferences_(probability_generator) {};
-        PackageSender(ReceiverPreferences receiver_preferences) : receiver_preferences_(std::move(receiver_preferences)) {}
+        PackageSender(ReceiverPreferences receiver_preferences) : receiver_preferences_(std::move(receiver_preferences)){}
         PackageSender(PackageSender&&)=default;
 
         void send_package();
