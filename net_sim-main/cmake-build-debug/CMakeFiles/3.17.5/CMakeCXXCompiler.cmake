@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "E:/clion/msys2/mingw64/bin/g++.exe")
+set(CMAKE_CXX_COMPILER "E:/Programy/programowanie/msys64/mingw64/bin/g++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "10.2.0")
@@ -19,11 +19,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "E:/clion/msys2/mingw64/bin/ar.exe")
-set(CMAKE_CXX_COMPILER_AR "E:/clion/msys2/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "E:/clion/msys2/mingw64/bin/ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "E:/clion/msys2/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "E:/clion/msys2/mingw64/bin/ld.exe")
+set(CMAKE_AR "E:/Programy/programowanie/msys64/mingw64/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "E:/Programy/programowanie/msys64/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "E:/Programy/programowanie/msys64/mingw64/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "E:/Programy/programowanie/msys64/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "E:/Programy/programowanie/msys64/mingw64/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -82,7 +82,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "E:/clion/msys2/mingw64/include/c++/10.2.0;E:/clion/msys2/mingw64/include/c++/10.2.0/x86_64-w64-mingw32;E:/clion/msys2/mingw64/include/c++/10.2.0/backward;E:/clion/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0/include;E:/clion/msys2/mingw64/include;E:/clion/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed;E:/clion/msys2/mingw64/x86_64-w64-mingw32/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "E:/Programy/programowanie/msys64/mingw64/include/c++/10.2.0;E:/Programy/programowanie/msys64/mingw64/include/c++/10.2.0/x86_64-w64-mingw32;E:/Programy/programowanie/msys64/mingw64/include/c++/10.2.0/backward;E:/Programy/programowanie/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0/include;E:/Programy/programowanie/msys64/mingw64/include;E:/Programy/programowanie/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed;E:/Programy/programowanie/msys64/mingw64/x86_64-w64-mingw32/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;moldname;mingwex;kernel32")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "E:/clion/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0;E:/clion/msys2/mingw64/lib/gcc;E:/clion/msys2/mingw64/x86_64-w64-mingw32/lib;E:/clion/msys2/mingw64/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "E:/Programy/programowanie/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0;E:/Programy/programowanie/msys64/mingw64/lib/gcc;E:/Programy/programowanie/msys64/mingw64/x86_64-w64-mingw32/lib;E:/Programy/programowanie/msys64/mingw64/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

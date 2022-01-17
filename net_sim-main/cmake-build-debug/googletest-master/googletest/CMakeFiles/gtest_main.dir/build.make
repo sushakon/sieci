@@ -53,19 +53,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main
+CMAKE_SOURCE_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug
+CMAKE_BINARY_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include googletest-master/googletest/CMakeFiles/gtest_main.dir/depend.make
@@ -79,16 +79,16 @@ include googletest-master/googletest/CMakeFiles/gtest_main.dir/flags.make
 googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: googletest-master/googletest/CMakeFiles/gtest_main.dir/flags.make
 googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: googletest-master/googletest/CMakeFiles/gtest_main.dir/includes_CXX.rsp
 googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: ../googletest-master/googletest/src/gtest_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc"
 
 googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/src/gtest_main.cc.i"
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc > CMakeFiles\gtest_main.dir\src\gtest_main.cc.i
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc" > CMakeFiles\gtest_main.dir\src\gtest_main.cc.i
 
 googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/src/gtest_main.cc.s"
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.s
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\googletest-master\googletest\src\gtest_main.cc" -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.s
 
 # Object files for target gtest_main
 gtest_main_OBJECTS = \
@@ -100,9 +100,9 @@ gtest_main_EXTERNAL_OBJECTS =
 lib/libgtest_maind.a: googletest-master/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
 lib/libgtest_maind.a: googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make
 lib/libgtest_maind.a: googletest-master/googletest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\lib\libgtest_maind.a"
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean_target.cmake
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest_main.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\lib\libgtest_maind.a"
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean_target.cmake
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest_main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 googletest-master/googletest/CMakeFiles/gtest_main.dir/build: lib/libgtest_maind.a
@@ -110,10 +110,10 @@ googletest-master/googletest/CMakeFiles/gtest_main.dir/build: lib/libgtest_maind
 .PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/build
 
 googletest-master/googletest/CMakeFiles/gtest_main.dir/clean:
-	cd /d C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean.cmake
+	cd /d "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean.cmake
 .PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
 
 googletest-master/googletest/CMakeFiles/gtest_main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\googletest-master\googletest C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest\CMakeFiles\gtest_main.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\googletest-master\googletest" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\googletest-master\googletest\CMakeFiles\gtest_main.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/depend
 

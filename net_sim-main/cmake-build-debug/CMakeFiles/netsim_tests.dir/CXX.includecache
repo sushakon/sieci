@@ -6,6 +6,202 @@
 
 #IncludeRegexTransform: 
 
+../googletest-master/googlemock/include/gmock/gmock-actions.h
+errno.h
+-
+algorithm
+-
+functional
+-
+memory
+-
+string
+-
+tuple
+-
+type_traits
+-
+utility
+-
+gmock/internal/gmock-internal-utils.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-internal-utils.h
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+gmock/internal/gmock-pp.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-pp.h
+
+../googletest-master/googlemock/include/gmock/gmock-cardinalities.h
+limits.h
+-
+memory
+-
+ostream
+-
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+gtest/gtest.h
+../googletest-master/googlemock/include/gmock/gtest/gtest.h
+
+../googletest-master/googlemock/include/gmock/gmock-function-mocker.h
+type_traits
+-
+utility
+-
+gmock/gmock-spec-builders.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-spec-builders.h
+gmock/internal/gmock-internal-utils.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-internal-utils.h
+gmock/internal/gmock-pp.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-pp.h
+
+../googletest-master/googlemock/include/gmock/gmock-matchers.h
+algorithm
+-
+cmath
+-
+initializer_list
+-
+iterator
+-
+limits
+-
+memory
+-
+ostream
+-
+sstream
+-
+string
+-
+type_traits
+-
+utility
+-
+vector
+-
+gmock/internal/gmock-internal-utils.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-internal-utils.h
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+gmock/internal/gmock-pp.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-pp.h
+gtest/gtest.h
+../googletest-master/googlemock/include/gmock/gtest/gtest.h
+gmock/internal/custom/gmock-matchers.h
+../googletest-master/googlemock/include/gmock/gmock/internal/custom/gmock-matchers.h
+
+../googletest-master/googlemock/include/gmock/gmock-more-actions.h
+memory
+-
+utility
+-
+gmock/gmock-actions.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-actions.h
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+gmock/internal/custom/gmock-generated-actions.h
+../googletest-master/googlemock/include/gmock/gmock/internal/custom/gmock-generated-actions.h
+
+../googletest-master/googlemock/include/gmock/gmock-more-matchers.h
+gmock/gmock-matchers.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-matchers.h
+
+../googletest-master/googlemock/include/gmock/gmock-nice-strict.h
+type_traits
+-
+gmock/gmock-spec-builders.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-spec-builders.h
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+
+../googletest-master/googlemock/include/gmock/gmock-spec-builders.h
+functional
+-
+map
+-
+memory
+-
+set
+-
+sstream
+-
+string
+-
+type_traits
+-
+utility
+-
+vector
+-
+gmock/gmock-actions.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-actions.h
+gmock/gmock-cardinalities.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-cardinalities.h
+gmock/gmock-matchers.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-matchers.h
+gmock/internal/gmock-internal-utils.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-internal-utils.h
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-port.h
+gtest/gtest.h
+../googletest-master/googlemock/include/gmock/gtest/gtest.h
+stdexcept
+-
+
+../googletest-master/googlemock/include/gmock/gmock.h
+gmock/gmock-actions.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-actions.h
+gmock/gmock-cardinalities.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-cardinalities.h
+gmock/gmock-function-mocker.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-function-mocker.h
+gmock/gmock-matchers.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-matchers.h
+gmock/gmock-more-actions.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-more-actions.h
+gmock/gmock-more-matchers.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-more-matchers.h
+gmock/gmock-nice-strict.h
+../googletest-master/googlemock/include/gmock/gmock/gmock-nice-strict.h
+gmock/internal/gmock-internal-utils.h
+../googletest-master/googlemock/include/gmock/gmock/internal/gmock-internal-utils.h
+
+../googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+
+../googletest-master/googlemock/include/gmock/internal/custom/gmock-matchers.h
+
+../googletest-master/googlemock/include/gmock/internal/custom/gmock-port.h
+
+../googletest-master/googlemock/include/gmock/internal/gmock-internal-utils.h
+stdio.h
+-
+ostream
+-
+string
+-
+type_traits
+-
+gmock/internal/gmock-port.h
+../googletest-master/googlemock/include/gmock/internal/gmock/internal/gmock-port.h
+gtest/gtest.h
+../googletest-master/googlemock/include/gmock/internal/gtest/gtest.h
+
+../googletest-master/googlemock/include/gmock/internal/gmock-port.h
+assert.h
+-
+stdlib.h
+-
+cstdint
+-
+iostream
+-
+gtest/internal/gtest-port.h
+../googletest-master/googlemock/include/gmock/internal/gtest/internal/gtest-port.h
+gmock/internal/custom/gmock-port.h
+../googletest-master/googlemock/include/gmock/internal/gmock/internal/custom/gmock-port.h
+
+../googletest-master/googlemock/include/gmock/internal/gmock-pp.h
+
 ../googletest-master/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
 ../googletest-master/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
@@ -332,6 +528,52 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../include/factory.hpp
+types.hpp
+../include/types.hpp
+nodes.hpp
+../include/nodes.hpp
+package.hpp
+../include/package.hpp
+storage_types.hpp
+../include/storage_types.hpp
+algorithm
+-
+optional
+-
+string
+../include/string
+list
+-
+sstream
+-
+
+../include/helpers.hpp
+functional
+-
+random
+-
+types.hpp
+../include/types.hpp
+
+../include/nodes.hpp
+types.hpp
+../include/types.hpp
+package.hpp
+../include/package.hpp
+storage_types.hpp
+../include/storage_types.hpp
+helpers.hpp
+../include/helpers.hpp
+memory
+-
+map
+-
+optional
+-
+utility
+-
+
 ../include/package.hpp
 iostream
 -
@@ -340,15 +582,157 @@ set
 types.hpp
 ../include/types.hpp
 
+../include/reports.hpp
+nodes.hpp
+../include/nodes.hpp
+factory.hpp
+../include/factory.hpp
+
+../include/simulation.hpp
+factory.hpp
+../include/factory.hpp
+
+../include/storage_types.hpp
+package.hpp
+../include/package.hpp
+list
+-
+deque
+-
+optional
+-
+
 ../include/types.hpp
 functional
 -
 
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/test_package.cpp
+../netsim_tests/mocks/global_functions_mock.hpp
+gmock/gmock.h
+../netsim_tests/mocks/gmock/gmock.h
 gtest/gtest.h
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+../netsim_tests/mocks/gtest/gtest.h
+helpers.hpp
+../netsim_tests/mocks/helpers.hpp
+
+../netsim_tests/mocks/nodes_mocks.hpp
+gmock/gmock.h
+../netsim_tests/mocks/gmock/gmock.h
+gtest/gtest.h
+../netsim_tests/mocks/gtest/gtest.h
+nodes.hpp
+../netsim_tests/mocks/nodes.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_Factory.cpp
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+factory.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/factory.hpp
+nodes.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/nodes.hpp
+iostream
+-
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_factory_io.cpp
+gmock/gmock.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gmock/gmock.h
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+factory.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/factory.hpp
+set
+-
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_nodes.cpp
+gmock/gmock.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gmock/gmock.h
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+nodes.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/nodes.hpp
 package.hpp
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/package.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/package.hpp
+storage_types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/storage_types.hpp
 types.hpp
-C:/Users/WuBu/Desktop/studia/II_rok/ZPO/sieci/net_sim-main/netsim_tests/test/types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/types.hpp
+nodes_mocks.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/nodes_mocks.hpp
+global_functions_mock.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/global_functions_mock.hpp
+iostream
+-
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_package.cpp
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+package.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/package.hpp
+types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/types.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_reports.cpp
+gmock/gmock.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gmock/gmock.h
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+factory.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/factory.hpp
+reports.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/reports.hpp
+functional
+-
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_simulate.cpp
+gmock/gmock.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gmock/gmock.h
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+nodes.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/nodes.hpp
+simulation.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/simulation.hpp
+helpers.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/helpers.hpp
+reports.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/reports.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/test_storage_types.cpp
+gtest/gtest.h
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/gtest/gtest.h
+package.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/package.hpp
+storage_types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/storage_types.hpp
+types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/netsim_tests/test/types.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/factory.cpp
+factory.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/factory.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/nodes.cpp
+nodes.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/nodes.hpp
+numeric
+-
+utility
+-
+iterator
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/iterator
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/package.cpp
+package.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/package.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/reports.cpp
+reports.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/reports.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/simulation.cpp
+simulation.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/simulation.hpp
+
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/storage_types.cpp
+storage_types.hpp
+E:/Programy/programowanie/nwm_nie_rozumiem/clion_projects/hehehehehehe bool/sieci/net_sim-main/src/storage_types.hpp
 

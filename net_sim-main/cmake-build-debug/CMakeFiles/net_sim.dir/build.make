@@ -53,19 +53,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main
+CMAKE_SOURCE_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug
+CMAKE_BINARY_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/net_sim.dir/depend.make
@@ -79,100 +79,114 @@ include CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/factory.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/factory.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/factory.cpp.obj: ../src/factory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/net_sim.dir/src/factory.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\factory.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\factory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/net_sim.dir/src/factory.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\factory.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\factory.cpp"
 
 CMakeFiles/net_sim.dir/src/factory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/factory.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\factory.cpp > CMakeFiles\net_sim.dir\src\factory.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\factory.cpp" > CMakeFiles\net_sim.dir\src\factory.cpp.i
 
 CMakeFiles/net_sim.dir/src/factory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/factory.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\factory.cpp -o CMakeFiles\net_sim.dir\src\factory.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\factory.cpp" -o CMakeFiles\net_sim.dir\src\factory.cpp.s
 
 CMakeFiles/net_sim.dir/src/helpers.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/helpers.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/helpers.cpp.obj: ../src/helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/net_sim.dir/src/helpers.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\helpers.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/net_sim.dir/src/helpers.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\helpers.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\helpers.cpp"
 
 CMakeFiles/net_sim.dir/src/helpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/helpers.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\helpers.cpp > CMakeFiles\net_sim.dir\src\helpers.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\helpers.cpp" > CMakeFiles\net_sim.dir\src\helpers.cpp.i
 
 CMakeFiles/net_sim.dir/src/helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/helpers.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\helpers.cpp -o CMakeFiles\net_sim.dir\src\helpers.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\helpers.cpp" -o CMakeFiles\net_sim.dir\src\helpers.cpp.s
 
 CMakeFiles/net_sim.dir/src/nodes.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/nodes.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/nodes.cpp.obj: ../src/nodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/net_sim.dir/src/nodes.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\nodes.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\nodes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/net_sim.dir/src/nodes.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\nodes.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\nodes.cpp"
 
 CMakeFiles/net_sim.dir/src/nodes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/nodes.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\nodes.cpp > CMakeFiles\net_sim.dir\src\nodes.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\nodes.cpp" > CMakeFiles\net_sim.dir\src\nodes.cpp.i
 
 CMakeFiles/net_sim.dir/src/nodes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/nodes.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\nodes.cpp -o CMakeFiles\net_sim.dir\src\nodes.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\nodes.cpp" -o CMakeFiles\net_sim.dir\src\nodes.cpp.s
 
 CMakeFiles/net_sim.dir/src/package.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/package.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/package.cpp.obj: ../src/package.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/net_sim.dir/src/package.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\package.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/net_sim.dir/src/package.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\package.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\package.cpp"
 
 CMakeFiles/net_sim.dir/src/package.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/package.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\package.cpp > CMakeFiles\net_sim.dir\src\package.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\package.cpp" > CMakeFiles\net_sim.dir\src\package.cpp.i
 
 CMakeFiles/net_sim.dir/src/package.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/package.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\package.cpp -o CMakeFiles\net_sim.dir\src\package.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\package.cpp" -o CMakeFiles\net_sim.dir\src\package.cpp.s
 
 CMakeFiles/net_sim.dir/src/reports.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/reports.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/reports.cpp.obj: ../src/reports.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/net_sim.dir/src/reports.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\reports.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\reports.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/net_sim.dir/src/reports.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\reports.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\reports.cpp"
 
 CMakeFiles/net_sim.dir/src/reports.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/reports.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\reports.cpp > CMakeFiles\net_sim.dir\src\reports.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\reports.cpp" > CMakeFiles\net_sim.dir\src\reports.cpp.i
 
 CMakeFiles/net_sim.dir/src/reports.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/reports.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\reports.cpp -o CMakeFiles\net_sim.dir\src\reports.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\reports.cpp" -o CMakeFiles\net_sim.dir\src\reports.cpp.s
+
+CMakeFiles/net_sim.dir/src/simulation.cpp.obj: CMakeFiles/net_sim.dir/flags.make
+CMakeFiles/net_sim.dir/src/simulation.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
+CMakeFiles/net_sim.dir/src/simulation.cpp.obj: ../src/simulation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/net_sim.dir/src/simulation.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\simulation.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\simulation.cpp"
+
+CMakeFiles/net_sim.dir/src/simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/simulation.cpp.i"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\simulation.cpp" > CMakeFiles\net_sim.dir\src\simulation.cpp.i
+
+CMakeFiles/net_sim.dir/src/simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/simulation.cpp.s"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\simulation.cpp" -o CMakeFiles\net_sim.dir\src\simulation.cpp.s
 
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/src/storage_types.cpp.obj: ../src/storage_types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/net_sim.dir/src/storage_types.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\storage_types.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\storage_types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/net_sim.dir/src/storage_types.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\src\storage_types.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\storage_types.cpp"
 
 CMakeFiles/net_sim.dir/src/storage_types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/src/storage_types.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\storage_types.cpp > CMakeFiles\net_sim.dir\src\storage_types.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\storage_types.cpp" > CMakeFiles\net_sim.dir\src\storage_types.cpp.i
 
 CMakeFiles/net_sim.dir/src/storage_types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/src/storage_types.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\src\storage_types.cpp -o CMakeFiles\net_sim.dir\src\storage_types.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\src\storage_types.cpp" -o CMakeFiles\net_sim.dir\src\storage_types.cpp.s
 
 CMakeFiles/net_sim.dir/main.cpp.obj: CMakeFiles/net_sim.dir/flags.make
 CMakeFiles/net_sim.dir/main.cpp.obj: CMakeFiles/net_sim.dir/includes_CXX.rsp
 CMakeFiles/net_sim.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/net_sim.dir/main.cpp.obj"
-	E:\clion\msys2\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\main.cpp.obj -c C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/net_sim.dir/main.cpp.obj"
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\net_sim.dir\main.cpp.obj -c "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\main.cpp"
 
 CMakeFiles/net_sim.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net_sim.dir/main.cpp.i"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\main.cpp > CMakeFiles\net_sim.dir\main.cpp.i
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\main.cpp" > CMakeFiles\net_sim.dir\main.cpp.i
 
 CMakeFiles/net_sim.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net_sim.dir/main.cpp.s"
-	E:\clion\msys2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\main.cpp -o CMakeFiles\net_sim.dir\main.cpp.s
+	E:\Programy\programowanie\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\main.cpp" -o CMakeFiles\net_sim.dir\main.cpp.s
 
 # Object files for target net_sim
 net_sim_OBJECTS = \
@@ -181,6 +195,7 @@ net_sim_OBJECTS = \
 "CMakeFiles/net_sim.dir/src/nodes.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/package.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/reports.cpp.obj" \
+"CMakeFiles/net_sim.dir/src/simulation.cpp.obj" \
 "CMakeFiles/net_sim.dir/src/storage_types.cpp.obj" \
 "CMakeFiles/net_sim.dir/main.cpp.obj"
 
@@ -192,13 +207,14 @@ net_sim.exe: CMakeFiles/net_sim.dir/src/helpers.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/nodes.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/package.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/reports.cpp.obj
+net_sim.exe: CMakeFiles/net_sim.dir/src/simulation.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/src/storage_types.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/main.cpp.obj
 net_sim.exe: CMakeFiles/net_sim.dir/build.make
 net_sim.exe: CMakeFiles/net_sim.dir/linklibs.rsp
 net_sim.exe: CMakeFiles/net_sim.dir/objects1.rsp
 net_sim.exe: CMakeFiles/net_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable net_sim.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable net_sim.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\net_sim.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -211,6 +227,6 @@ CMakeFiles/net_sim.dir/clean:
 .PHONY : CMakeFiles/net_sim.dir/clean
 
 CMakeFiles/net_sim.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles\net_sim.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles\net_sim.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/net_sim.dir/depend
 

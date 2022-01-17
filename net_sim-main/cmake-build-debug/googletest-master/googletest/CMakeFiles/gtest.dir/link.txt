@@ -1,2 +1,2 @@
-E:\clion\msys2\mingw64\bin\ar.exe qc ..\..\lib\libgtestd.a  CMakeFiles/gtest.dir/src/gtest-all.cc.obj
-E:\clion\msys2\mingw64\bin\ranlib.exe ..\..\lib\libgtestd.a
+E:\Programy\programowanie\msys64\mingw64\bin\ar.exe qc ..\..\lib\libgtestd.a  CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+E:\Programy\programowanie\msys64\mingw64\bin\ranlib.exe ..\..\lib\libgtestd.a

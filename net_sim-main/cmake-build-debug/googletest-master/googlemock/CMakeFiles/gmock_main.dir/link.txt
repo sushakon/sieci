@@ -1,2 +1,2 @@
-E:\clion\msys2\mingw64\bin\ar.exe qc ..\..\lib\libgmock_maind.a  CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj
-E:\clion\msys2\mingw64\bin\ranlib.exe ..\..\lib\libgmock_maind.a
+E:\Programy\programowanie\msys64\mingw64\bin\ar.exe qc ..\..\lib\libgmock_maind.a  CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj
+E:\Programy\programowanie\msys64\mingw64\bin\ranlib.exe ..\..\lib\libgmock_maind.a

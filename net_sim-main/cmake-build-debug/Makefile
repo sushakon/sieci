@@ -58,19 +58,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main
+CMAKE_SOURCE_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug
+CMAKE_BINARY_DIR = "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cm
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,31 +89,31 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -134,20 +134,20 @@ list_install_components/fast: list_install_components
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"E:\clion\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	"E:\Programy\programowanie\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WuBu\Desktop\studia\II_rok\ZPO\sieci\net_sim-main\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\Programy\programowanie\nwm_nie_rozumiem\clion_projects\hehehehehehe bool\sieci\net_sim-main\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -442,6 +442,33 @@ netsim_tests/test/test_reports.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/netsim_tests/test/test_reports.cpp.s
 .PHONY : netsim_tests/test/test_reports.cpp.s
 
+netsim_tests/test/test_simulate.obj: netsim_tests/test/test_simulate.cpp.obj
+
+.PHONY : netsim_tests/test/test_simulate.obj
+
+# target to build an object file
+netsim_tests/test/test_simulate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/netsim_tests/test/test_simulate.cpp.obj
+.PHONY : netsim_tests/test/test_simulate.cpp.obj
+
+netsim_tests/test/test_simulate.i: netsim_tests/test/test_simulate.cpp.i
+
+.PHONY : netsim_tests/test/test_simulate.i
+
+# target to preprocess a source file
+netsim_tests/test/test_simulate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/netsim_tests/test/test_simulate.cpp.i
+.PHONY : netsim_tests/test/test_simulate.cpp.i
+
+netsim_tests/test/test_simulate.s: netsim_tests/test/test_simulate.cpp.s
+
+.PHONY : netsim_tests/test/test_simulate.s
+
+# target to generate assembly for a file
+netsim_tests/test/test_simulate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/netsim_tests/test/test_simulate.cpp.s
+.PHONY : netsim_tests/test/test_simulate.cpp.s
+
 netsim_tests/test/test_storage_types.obj: netsim_tests/test/test_storage_types.cpp.obj
 
 .PHONY : netsim_tests/test/test_storage_types.obj
@@ -619,6 +646,36 @@ src/reports.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/src/reports.cpp.s
 .PHONY : src/reports.cpp.s
 
+src/simulation.obj: src/simulation.cpp.obj
+
+.PHONY : src/simulation.obj
+
+# target to build an object file
+src/simulation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\net_sim.dir\build.make CMakeFiles/net_sim.dir/src/simulation.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/src/simulation.cpp.obj
+.PHONY : src/simulation.cpp.obj
+
+src/simulation.i: src/simulation.cpp.i
+
+.PHONY : src/simulation.i
+
+# target to preprocess a source file
+src/simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\net_sim.dir\build.make CMakeFiles/net_sim.dir/src/simulation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/src/simulation.cpp.i
+.PHONY : src/simulation.cpp.i
+
+src/simulation.s: src/simulation.cpp.s
+
+.PHONY : src/simulation.s
+
+# target to generate assembly for a file
+src/simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\net_sim.dir\build.make CMakeFiles/net_sim.dir/src/simulation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\netsim_tests.dir\build.make CMakeFiles/netsim_tests.dir/src/simulation.cpp.s
+.PHONY : src/simulation.cpp.s
+
 src/storage_types.obj: src/storage_types.cpp.obj
 
 .PHONY : src/storage_types.obj
@@ -688,6 +745,9 @@ help:
 	@echo ... netsim_tests/test/test_reports.obj
 	@echo ... netsim_tests/test/test_reports.i
 	@echo ... netsim_tests/test/test_reports.s
+	@echo ... netsim_tests/test/test_simulate.obj
+	@echo ... netsim_tests/test/test_simulate.i
+	@echo ... netsim_tests/test/test_simulate.s
 	@echo ... netsim_tests/test/test_storage_types.obj
 	@echo ... netsim_tests/test/test_storage_types.i
 	@echo ... netsim_tests/test/test_storage_types.s
@@ -706,6 +766,9 @@ help:
 	@echo ... src/reports.obj
 	@echo ... src/reports.i
 	@echo ... src/reports.s
+	@echo ... src/simulation.obj
+	@echo ... src/simulation.i
+	@echo ... src/simulation.s
 	@echo ... src/storage_types.obj
 	@echo ... src/storage_types.i
 	@echo ... src/storage_types.s
