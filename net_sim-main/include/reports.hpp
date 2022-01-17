@@ -14,19 +14,25 @@ void generate_simulation_turn_report(Factory& f, std::ostream& os, Time t);
 
 
 class IntervalReportNotifier {
-private:
-    TimeOffset to_;
-public:
-    explicit IntervalReportNotifier(TimeOffset to) : to_(to) {}
-    bool  should_generate_report(Time t) { return (t - 1) % to_ == 0; }
+
+    public:
+        IntervalReportNotifier(TimeOffset to) : to_(to) {};
+
+        bool  should_generate_report(Time t) {return (t - 1) % to_ == 0; };
+
+    private:
+        TimeOffset to_;
 };
 
 class SpecificTurnsReportNotifier {
-private:
-    std::set<Time> turns_;
-public:
-    explicit SpecificTurnsReportNotifier(std::set<Time> turns) : turns_(std::move(turns)) {}
-    bool should_generate_report(Time t) { return turns_.find(t) != turns_.end(); }
+
+    public:
+        SpecificTurnsReportNotifier(std::set<Time> turns) : turns_(std::move(turns)) {};
+
+        bool should_generate_report(Time t) {return turns_.find(t) != turns_.end(); };
+
+    private:
+        std::set<Time> turns_;
 };
 
 
