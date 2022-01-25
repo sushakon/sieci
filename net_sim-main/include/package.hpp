@@ -13,6 +13,7 @@ class Package {
 
             if (!freed_IDs_.empty()) {
                 ElementID first = *freed_IDs_.begin();
+                freed_IDs_.erase(first);
                 for (const auto el: freed_IDs_) {
                     if (el < first)
                         first = el;
